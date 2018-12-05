@@ -28,22 +28,13 @@
 				<!-- begin sidebar nav -->
 				<ul class="nav">
 					<li class="nav-header">Navigation</li>
-					<li class="has-sub active">
+					<li class="has-sub">
 						<a href="<?php echo base_url('Admin/Admin'); ?>">
 							<b class="caret"></b>
 							<i class="fa fa-th-large"></i>
 							<span>Dashboard</span>
 						</a>
-					</li>
-					</li>
-					<li class="has-sub">
-	
-						<ul class="sub-menu">
-							<li><a href="email_inbox.html">Inbox</a></li>
-							<li><a href="email_compose.html">Compose</a></li>
-							<li><a href="email_detail.html">Detail</a></li>
-						</ul>
-					</li>
+					
 					<!-- <li class="has-sub">
 						<a href="javascript:;">
 							<b class="caret"></b>
@@ -58,9 +49,16 @@
 							<span>Gallery</span>
 						</a>
 						<ul class="sub-menu">
-							<li><a href="<?php echo base_url('Admin/Admin/foto') ?>">Foto</a></li>
-							<li><a href="<?php echo base_url('Admin/Admin/Video') ?>">Video</a></li>
+							<li><a href="<?php echo base_url('Admin/Tambahfoto') ?>">Foto</a></li>
+							<li><a href="<?php echo base_url('Admin/Tambahvideo') ?>">Video</a></li>
 						</ul>
+					</li>
+					<li class="has-sub">
+						<a href="<?php echo base_url('Admin/Produk'); ?>">
+							<b class="caret"></b>
+							<i class="fa fa-coffee"></i>
+							<span>Produk</span>
+						</a>
 					</li>
 					<!-- begin sidebar minify button -->
 					<li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>

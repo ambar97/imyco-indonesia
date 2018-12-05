@@ -39,3 +39,12 @@
 	<script src="<?php echo base_url()?>/master/admin/assets/plugins/DataTables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
 	<script src="<?php echo base_url()?>/master/admin/assets/js/demo/table-manage-buttons.demo.min.js"></script>
 	<!-- ================== END PAGE LEVEL JS ================== -->
+
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="<?php echo base_url()?>/master/admin/assets/plugins/dropzone/min/dropzone.min.js"></script>
+	<script src="<?php echo base_url()?>/master/admin/assets/plugins/highlight/highlight.common.js"></script>
+	<script src="<?php echo base_url()?>/master/admin/assets/js/demo/render.highlight.js"></script>
+	<!-- ================== END PAGE LEVEL JS ================== -->
+
+	<script src="<?php echo base_url()?>/master/admin/dropzone-master/dist/dropzone.js"></script>
+	
