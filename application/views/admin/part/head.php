@@ -31,4 +31,10 @@
 	<script src="<?php echo base_url()?>/master/admin/assets/plugins/pace/pace.min.js"></script>
 	<!-- ================== END BASE JS ================== -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+	<!-- ================== BEGIN PAGE LEVEL STYLE ================== -->
+	<link href="<?php echo base_url()?>/master/admin/assets/plugins/dropzone/min/dropzone.min.css" rel="stylesheet" />
+	<!-- ================== END PAGE LEVEL STYLE ================== -->
+	<link rel="stylesheet" href="<?php echo base_url() ?>master/admin/dropify/dist/css/dropify.min.css">
+	
 </head>

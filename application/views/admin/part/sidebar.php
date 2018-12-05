@@ -34,16 +34,7 @@
 							<i class="fa fa-th-large"></i>
 							<span>Dashboard</span>
 						</a>
-					</li>
-					</li>
-					<li class="has-sub">
-	
-						<ul class="sub-menu">
-							<li><a href="email_inbox.html">Inbox</a></li>
-							<li><a href="email_compose.html">Compose</a></li>
-							<li><a href="email_detail.html">Detail</a></li>
-						</ul>
-					</li>
+					
 					<!-- <li class="has-sub">
 						<a href="javascript:;">
 							<b class="caret"></b>

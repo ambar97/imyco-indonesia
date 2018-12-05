@@ -38,37 +38,44 @@
 					<div class="panel panel-inverse">	
 						<div class="panel-body">
 							<div >
-								<a href="#" ><button style="width: 20%;" class="btn  btn-primary " type="submit">Insert</button></a>
+								<a href="#modal-alert" data-toggle="modal" ><button style="width: 20%;" class="btn  btn-primary " type="submit">Insert</button></a>
+								<div class="modal fade" id="modal-alert">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h4 class="modal-title">Alert Header</h4>
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+											</div>
+
+											<div class="modal-body">
+												<form method="post" action="">
+												<div class="alert alert-danger m-b-0">
+													<h5><i class="fa fa-info-circle"></i> </h5>
+													<input type="text" class="form-control m-b-5" placeholder="Masukan Judul" required="" />
+													<span>Masukan Gambar</span>
+													<br>
+													<input type="file" id="input-file-now" class="dropify" name="gambar_galeri" required="" />
+												</div>
+												<div class="modal-footer">
+													<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
+													<a href="" ><button type="submit"  class="btn btn-danger" >Action</button></a>
+												</div>
+												</form>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+
 							</div>
 						</div>
 					</div>
 				</div>
 			</div> 
-			<!-- end breadcrumb -->
-			<!-- begin page-header -->
 			<h1 class="page-header">Photo Controler <small>Manage your file here ...!</small></h1>
-			<!-- end page-header -->
-			<!-- begin row -->
 			<div class="row">
-				<!-- begin col-2 -->
-				
-				<!-- end col-2 -->
-				<!-- begin col-10 -->
 				<div class="col-lg-12">
-					<!-- begin panel -->
 					<div class="panel panel-inverse">
-						<!-- begin panel-heading -->
-						
-						<!-- end panel-heading -->
-						<!-- begin alert -->
-						<div class="alert alert-warning fade show">
-							<button type="button" class="close" data-dismiss="alert">
-							<span aria-hidden="true">&times;</span>
-							</button>
-							The Buttons extension for DataTables provides a common set of options, API methods and styling to display buttons on a page that will interact with a DataTable. The core library provides the based framework upon which plug-ins can built.
-						</div>
-						<!-- end alert -->
-						<!-- begin panel-body -->
 						<div class="panel-body">
 							<table id="data-table-buttons" class="table table-striped table-bordered">
 								<thead>
@@ -111,21 +118,21 @@
 		<!-- end scroll to top btn -->
 	</div>
 	<!-- end page container -->
-<?php $this->load->view('admin/part/codejs') ?>
+	<?php $this->load->view('admin/part/codejs') ?>
 	<script>
 		$(document).ready(function() {
 			App.init();
 			TableManageButtons.init();
 		});
 	</script>
-<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','<?php echo base_url()?>/master/admin/<?php echo base_url()?>/master/admin/<?php echo base_url()?>/master/admin/<?php echo base_url()?>/master/admin/www.google-analytics.com/analytics.js','ga');
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','<?php echo base_url()?>/master/admin/<?php echo base_url()?>/master/admin/<?php echo base_url()?>/master/admin/<?php echo base_url()?>/master/admin/www.google-analytics.com/analytics.js','ga');
 
-	  ga('create', 'UA-53034621-1', 'auto');
-	  ga('send', 'pageview');
+		ga('create', 'UA-53034621-1', 'auto');
+		ga('send', 'pageview');
 
 	</script>
 </body>

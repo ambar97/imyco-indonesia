@@ -59,19 +59,13 @@
 				<!-- begin col-10 -->
 				<div class="col-lg-12">
 					<!-- begin panel -->
-					<div class="panel panel-inverse">
-						<!-- begin panel-heading -->
-						
-						<!-- end panel-heading -->
-						<!-- begin alert -->
-						<div class="alert alert-warning fade show">
+					<div class="panel panel-inverse">-->
+						<!-- <div class="alert alert-warning fade show">
 							<button type="button" class="close" data-dismiss="alert">
 							<span aria-hidden="true">&times;</span>
 							</button>
 							The Buttons extension for DataTables provides a common set of options, API methods and styling to display buttons on a page that will interact with a DataTable. The core library provides the based framework upon which plug-ins can built.
-						</div>
-						<!-- end alert -->
-						<!-- begin panel-body -->
+						</div> -->
 						<div class="panel-body">
 							<table id="data-table-buttons" class="table table-striped table-bordered">
 								<thead>
