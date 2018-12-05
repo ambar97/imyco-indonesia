@@ -48,13 +48,13 @@
 											</div>
 
 											<div class="modal-body">
-												<form method="post" action="">
+												<form method="post" action="<?php echo base_url('Admin/Tambahfoto/simpanfoto') ?>">
 												<div class="alert alert-danger m-b-0">
 													<h5><i class="fa fa-info-circle"></i> </h5>
-													<input type="text" class="form-control m-b-5" placeholder="Masukan Judul" required="" />
+													<input type="text" class="form-control m-b-5" name="jdlGalery" placeholder="Masukan Judul" required="" />
 													<span>Masukan Gambar</span>
 													<br>
-													<input type="file" id="input-file-now" class="dropify" name="gambar_galeri" required="" />
+													<input type="file" id="input-file-now" class="dropify" name="link" required="" />
 												</div>
 												<div class="modal-footer">
 													<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
@@ -81,20 +81,23 @@
 								<thead>
 									<tr>
 										<th width="1%"></th>
-										<th width="1%" data-orderable="false"></th>
+										
 										<th class="text-nowrap">Judul</th>
 										<th class="text-nowrap">Kategori</th>
-										<th class="text-nowrap">Gambar</th>
+										<th width="1%" data-orderable="false">Gambar</th>
 										<th class="text-nowrap">Action</th>
 									</tr>
 								</thead>
 								<tbody>
+									<?php foreach ($galery as $foto ) {
+										# code...
+									} ?>
 									<tr class="odd gradeX">
 										<td width="1%" class="f-s-600 text-inverse">1</td>
-										<td width="1%" class="with-img"><img src="<?php echo base_url()?>/master/admin/assets/img/user/user-1.jpg" class="img-rounded height-30" /></td>
-										<td>Trident</td>
-										<td>Internet Explorer 4.0</td>
-										<td>Win 95+</td>
+										
+										<td><?php echo $foto->jdlGalery; ?></td>
+										<td><?php echo $foto->action; ?></td>
+										<td width="1%" class="with-img"><img src="<?php echo base_url($foto->link)?>/master/admin/assets/img/user/user-1.jpg" class="img-rounded height-30" /></td>
 										<td align="center">
 											<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: red;" title="hapus" href=""><i class="fa fa-trash"></i></a>
 											<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: orange;" title="edit" href=""><i class="fa fa-brush"></i></a>

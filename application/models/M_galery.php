@@ -31,4 +31,10 @@
 		function cek_login($table,$where){
 			return $this->db->get_where($table,$where);
 		}
+
+		function tampildatagalery(){
+			$simpangambar = $this->db->get('galery');
+ 			return $simpangambar;
+		}
+
 	}

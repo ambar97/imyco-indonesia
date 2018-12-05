@@ -49,7 +49,7 @@
 							<span>Gallery</span>
 						</a>
 						<ul class="sub-menu">
-							<li><a href="<?php echo base_url('Admin/Admin/foto') ?>">Foto</a></li>
+							<li><a href="<?php echo base_url('Admin/Tambahfoto') ?>">Foto</a></li>
 							<li><a href="<?php echo base_url('Admin/Admin/Video') ?>">Video</a></li>
 						</ul>
 					</li>
