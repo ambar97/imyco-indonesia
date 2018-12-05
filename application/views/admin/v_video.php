@@ -5,7 +5,7 @@
 <!--<![endif]-->
 
 <!-- Mirrored from seantheme.com/color-admin-v4.2/admin/html/table_manage_buttons.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Dec 2018 03:37:38 GMT -->
-<?php $this->load->view('admin/part/cssheadtable');?>
+<?php $this->load->view('admin/part/head');?>
 <body>
 	<!-- begin #page-loader -->
 	<div id="page-loader" class="fade show"><span class="spinner"></span></div>
@@ -78,10 +78,9 @@
 									<tr>
 										<th width="1%"></th>
 										<th width="1%" data-orderable="false"></th>
-										<th class="text-nowrap">Rendering engine</th>
-										<th class="text-nowrap">Browser</th>
-										<th class="text-nowrap">Platform(s)</th>
-										<th class="text-nowrap">Engine version</th>
+										<th class="text-nowrap">Judul</th>
+										<th class="text-nowrap">Kategori</th>
+										<th class="text-nowrap">Link</th>
 										<th class="text-nowrap">Action</th>
 									</tr>
 								</thead>
@@ -92,26 +91,10 @@
 										<td>Trident</td>
 										<td>Internet Explorer 4.0</td>
 										<td>Win 95+</td>
-										<td>4</td>
-										<td>X</td>
-									</tr>
-									<tr class="even gradeC">
-										<td width="1%" class="f-s-600 text-inverse">2</td>
-										<td width="1%" class="with-img"><img src="<?php echo base_url()?>/master/admin/assets/img/user/user-2.jpg" class="img-rounded height-30" /></td>
-										<td>Trident</td>
-										<td>Internet Explorer 5.0</td>
-										<td>Win 95+</td>
-										<td>5</td>
-										<td>C</td>
-									</tr>
-									<tr class="odd gradeA">
-										<td width="1%" class="f-s-600 text-inverse">3</td>
-										<td width="1%" class="with-img"><img src="<?php echo base_url()?>/master/admin/assets/img/user/user-3.jpg" class="img-rounded height-30" /></td>
-										<td>Trident</td>
-										<td>Internet Explorer 5.5</td>
-										<td>Win 95+</td>
-										<td>5.5</td>
-										<td>A</td>
+										<td align="center">
+											<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: red;" title="hapus" href=""><i class="fa fa-trash"></i></a>
+											<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: orange;" title="edit" href=""><i class="fa fa-brush"></i></a>
+										</td>
 									</tr>
 								</tbody>
 							</table>
@@ -133,7 +116,7 @@
 	</div>
 	<!-- end page container -->
 	
-	<?php $this->load->view('admin/part/fotertable') ?>
+	<?php $this->load->view('admin/part/codejs') ?>
 	
 	<script>
 		$(document).ready(function() {

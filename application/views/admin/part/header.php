@@ -20,6 +20,7 @@
 						</div>
 					</form>
 				</li>
+				<!-- aktifkan jika perlu notifikasi -->
 			<!-- 	<li class="dropdown">
 					<a href="javascript:;" data-toggle="dropdown" class="dropdown-toggle f-s-14">
 						<i class="fa fa-bell"></i>
