@@ -54,7 +54,7 @@
 													<input type="text" class="form-control m-b-5" name="jdlGalery" placeholder="Masukan Judul" required="" />
 													<span>Masukan Gambar</span>
 													<br>
-													<input type="file" id="input-file-now" class="dropify" name="link" required="" />
+													<input type="file" id="input-file-now" name="link" required="" />
 												</div>
 												<div class="modal-footer">
 													<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
@@ -81,28 +81,23 @@
 								<thead>
 									<tr>
 										<th width="1%"></th>
-										
 										<th class="text-nowrap">Judul</th>
-										<th class="text-nowrap">Kategori</th>
 										<th width="1%" data-orderable="false">Gambar</th>
 										<th class="text-nowrap">Action</th>
 									</tr>
 								</thead>
 								<tbody>
-									<?php foreach ($galery as $foto ) {
-										# code...
-									} ?>
+									<?php $no = 1; foreach ($galery as $foto ) {?>
 									<tr class="odd gradeX">
-										<td width="1%" class="f-s-600 text-inverse">1</td>
-										
+										<td width="1%" class="f-s-600 text-inverse"><?php echo  $no++ ?></td>
 										<td><?php echo $foto->jdlGalery; ?></td>
-										<td><?php echo $foto->action; ?></td>
 										<td width="1%" class="with-img"><img src="<?php echo base_url($foto->link)?>/master/admin/assets/img/user/user-1.jpg" class="img-rounded height-30" /></td>
 										<td align="center">
 											<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: red;" title="hapus" href=""><i class="fa fa-trash"></i></a>
 											<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: orange;" title="edit" href=""><i class="fa fa-brush"></i></a>
 										</td>
 									</tr>
+								<?php } ?>
 								</tbody>
 							</table>
 						</div>

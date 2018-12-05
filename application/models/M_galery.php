@@ -32,7 +32,8 @@
 			return $this->db->get_where($table,$where);
 		}
 
-		function tampildatagalery(){
+		function tampildatagalery($id){
+			$where  = $this->db->where('kategori',$id);
 			$simpangambar = $this->db->get('galery');
  			return $simpangambar;
 		}
