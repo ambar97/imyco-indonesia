@@ -9,12 +9,12 @@ class Tambahvideo extends CI_Controller {
 	}
 	public function index(){
 		$data['galery'] = $this->M_galery->tampildatagalery('Video')->result();
-		$this->load->view("admin/v_video");
+		$this->load->view("admin/v_video",$data);
 	
 	}
 	function simpanfoto(){
-		$dir 						= 'assets/images_upload/foto_forum/';
-		$config['upload_path']      = 'assets/images_upload/foto_forum/';
+		$dir 						= 'galery/';
+		$config['upload_path']      = 'galery/';
 		$config['allowed_types']    = 'jpg|png|jpeg';
 		$config['max_size']         = '2048';
 		$this->load->library('upload', $config);

@@ -66,30 +66,28 @@
 							</button>
 							The Buttons extension for DataTables provides a common set of options, API methods and styling to display buttons on a page that will interact with a DataTable. The core library provides the based framework upon which plug-ins can built.
 						</div> -->
-						<div class="panel-body">
+					<div class="panel-body">
 							<table id="data-table-buttons" class="table table-striped table-bordered">
 								<thead>
 									<tr>
 										<th width="1%"></th>
-										<th width="1%" data-orderable="false"></th>
 										<th class="text-nowrap">Judul</th>
-										<th class="text-nowrap">Kategori</th>
-										<th class="text-nowrap">Link</th>
+										<th width="1%" data-orderable="false">Video</th>
 										<th class="text-nowrap">Action</th>
 									</tr>
 								</thead>
 								<tbody>
+									<?php $no = 1; foreach ($galery as $video ) {?>
 									<tr class="odd gradeX">
-										<td width="1%" class="f-s-600 text-inverse">1</td>
-										<td width="1%" class="with-img"><img src="<?php echo base_url()?>/master/admin/assets/img/user/user-1.jpg" class="img-rounded height-30" /></td>
-										<td>Trident</td>
-										<td>Internet Explorer 4.0</td>
-										<td>Win 95+</td>
+										<td width="1%" class="f-s-600 text-inverse"><?php echo  $no++ ?></td>
+										<td><?php echo $video->jdlGalery; ?></td>
+										<td><?php echo $video->link; ?></td>
 										<td align="center">
 											<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: red;" title="hapus" href=""><i class="fa fa-trash"></i></a>
 											<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: orange;" title="edit" href=""><i class="fa fa-brush"></i></a>
 										</td>
 									</tr>
+								<?php } ?>
 								</tbody>
 							</table>
 						</div>
