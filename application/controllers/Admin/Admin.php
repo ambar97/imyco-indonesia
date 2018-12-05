@@ -6,4 +6,12 @@ class Admin extends CI_Controller {
 	{
 		$this->load->view('admin/v_hadmin');
 	}
+
+	function foto(){
+		$this->load->view('admin/v_galery');
+	}
+
+	function video(){
+		$this->load->view('admin/v_video');
+	}
 }

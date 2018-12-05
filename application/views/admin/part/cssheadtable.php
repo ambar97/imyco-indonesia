@@ -1,9 +1,9 @@
 <head>
-<!-- 	<meta charset="utf-8" />
-	<title>Color Admin | Dashboard</title>
+	<meta charset="utf-8" />
+	<title>Color Admin | Managed Tables - Buttons</title>
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 	<meta content="" name="description" />
-	<meta content="" name="author" /> -->
+	<meta content="" name="author" />
 	
 	<!-- ================== BEGIN BASE CSS STYLE ================== -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -17,9 +17,9 @@
 	<!-- ================== END BASE CSS STYLE ================== -->
 	
 	<!-- ================== BEGIN PAGE LEVEL STYLE ================== -->
-	<link href="<?php echo base_url()?>/master/admin/assets/plugins/jquery-jvectormap/jquery-jvectormap.css" rel="stylesheet" />
-	<link href="<?php echo base_url()?>/master/admin/assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.css" rel="stylesheet" />
-	<link href="<?php echo base_url()?>/master/admin/assets/plugins/gritter/css/jquery.gritter.css" rel="stylesheet" />
+	<link href="<?php echo base_url()?>/master/admin/assets/plugins/DataTables/media/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+	<link href="<?php echo base_url()?>/master/admin/assets/plugins/DataTables/extensions/Buttons/css/buttons.bootstrap.min.css" rel="stylesheet" />
+	<link href="<?php echo base_url()?>/master/admin/assets/plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css" rel="stylesheet" />
 	<!-- ================== END PAGE LEVEL STYLE ================== -->
 	
 	<!-- ================== BEGIN BASE JS ================== -->

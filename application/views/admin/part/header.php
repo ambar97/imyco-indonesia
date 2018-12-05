@@ -20,12 +20,12 @@
 						</div>
 					</form>
 				</li>
-				<li class="dropdown">
+			<!-- 	<li class="dropdown">
 					<a href="javascript:;" data-toggle="dropdown" class="dropdown-toggle f-s-14">
 						<i class="fa fa-bell"></i>
 						<span class="label">5</span>
-					</a>
-					<ul class="dropdown-menu media-list dropdown-menu-right">
+					</a> -->
+				<!-- 	<ul class="dropdown-menu media-list dropdown-menu-right">
 						<li class="dropdown-header">NOTIFICATIONS (5)</li>
 						<li class="media">
 							<a href="javascript:;">
@@ -41,7 +41,7 @@
 						<li class="media">
 							<a href="javascript:;">
 								<div class="media-left">
-									<img src="<?php echo base_url()?>/master/admin/assets/img/user/user-1.jpg" class="media-object" alt="" />
+									<img src="<?php //echo base_url()?>/master/admin/assets/img/user/user-1.jpg" class="media-object" alt="" />
 									<i class="fab fa-facebook-messenger text-primary media-object-icon"></i>
 								</div>
 								<div class="media-body">
@@ -54,7 +54,7 @@
 						<li class="media">
 							<a href="javascript:;">
 								<div class="media-left">
-									<img src="<?php echo base_url()?>/master/admin/assets/img/user/user-2.jpg" class="media-object" alt="" />
+									<img src="<?php //echo base_url()?>/master/admin/assets/img/user/user-2.jpg" class="media-object" alt="" />
 									<i class="fab fa-facebook-messenger text-primary media-object-icon"></i>
 								</div>
 								<div class="media-body">
@@ -90,7 +90,7 @@
 						<li class="dropdown-footer text-center">
 							<a href="javascript:;">View more</a>
 						</li>
-					</ul>
+					</ul> -->
 				</li>
 				<li class="dropdown navbar-user">
 					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
