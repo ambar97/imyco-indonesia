@@ -13,17 +13,13 @@
                 </div>
                 <!-- .col-md-3 end -->
                 <div class="col-xs-12 col-sm-6 col-md-4">
-                    <div class="footer--reservation">
-                        <div class="divider--shape-10up"></div>
-                        <h3>Make A Reservation</h3>
+                    <div  class="footer--reservation" style="background-image: url(<?php echo base_url()?>master/desain.jpg);">
+                        <!-- <div class="divider--shape-10up" style="background-color: #bdc3c7"></div> -->
+                        <!-- <h3>Make A Reservation</h3> -->
                         <div class="divider--shape-11"></div>
-                        <div class="footer--reservation-wrapper">
-                            <ul class="list-unstyled">
-                                <li>Week days <span>09.00 – 24:00</span></li>
-                                <li>Saturday <span>08:00 – 03.00</span></li>
-                                <li>Sunday <span>Day off</span></li>
-                            </ul>
-                            <a class="btn btn--primary btn--bordered btn--block" data-toggle="modal" data-target="#reservationPopup">Find A Table</a>
+                        <div class="footer--reservation-wrapper" >
+                            <img height="250px;" src="<?php echo base_url() ?>gambar/IMyCo.png">
+                            <!-- <a class="btn btn--primary btn--bordered btn--block" data-toggle="modal" data-target="#reservationPopup">Find A Table</a> -->
 <div class="modal fade reservation-popup" tabindex="-1" role="dialog" id="reservationPopup">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
