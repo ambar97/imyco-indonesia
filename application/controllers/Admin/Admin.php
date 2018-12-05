@@ -14,4 +14,5 @@ class Admin extends CI_Controller {
 	function video(){
 		$this->load->view('admin/v_video');
 	}
+
 }
