@@ -12,7 +12,7 @@ class Tambahvideo extends CI_Controller {
 		$this->load->view("admin/v_video",$data);
 	
 	}
-	function simpanfoto(){
+	function simpanvideo(){
 		$dir 						= 'galery/';
 		$config['upload_path']      = 'galery/';
 		$config['allowed_types']    = 'jpg|png|jpeg';

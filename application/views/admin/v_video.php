@@ -36,6 +36,33 @@
 						<div class="panel-body">
 							<div >
 								<a href="#" ><button style="width: 20%;" class="btn  btn-primary " type="submit">Insert</button></a>
+								<div class="modal fade" id="modal-alert">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h4 class="modal-title">Alert Header</h4>
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+											</div>
+
+											<div class="modal-body">
+												<form method="post" action="<?php echo base_url('Admin/Tambahfoto/simpanfoto') ?>">
+												<div class="alert alert-danger m-b-0">
+													<h5><i class="fa fa-info-circle"></i> </h5>
+													<input type="text" class="form-control m-b-5" name="jdlGalery" placeholder="Masukan Judul" required="" />
+													<span>Masukan Gambar</span>
+													<br>
+													<input type="file" id="input-file-now" name="link" required="" />
+												</div>
+												<div class="modal-footer">
+													<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
+													<a href="" ><button type="submit"  class="btn btn-danger" >Action</button></a>
+												</div>
+												</form>
+											</div>
+											
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -59,7 +86,7 @@
 				<!-- begin col-10 -->
 				<div class="col-lg-12">
 					<!-- begin panel -->
-					<div class="panel panel-inverse">-->
+					<div class="panel panel-inverse">
 						<!-- <div class="alert alert-warning fade show">
 							<button type="button" class="close" data-dismiss="alert">
 							<span aria-hidden="true">&times;</span>
