@@ -35,7 +35,7 @@
 					<div class="panel panel-inverse">	
 						<div class="panel-body">
 							<div >
-								<a href="#" ><button style="width: 20%;" class="btn  btn-primary " type="submit">Insert</button></a>
+								<a href="#modal-alert" data-toggle="modal"  ><button style="width: 20%;" class="btn  btn-primary " type="submit">Insert</button></a>
 								<div class="modal fade" id="modal-alert">
 									<div class="modal-dialog">
 										<div class="modal-content">
@@ -49,9 +49,9 @@
 												<div class="alert alert-danger m-b-0">
 													<h5><i class="fa fa-info-circle"></i> </h5>
 													<input type="text" class="form-control m-b-5" name="jdlGalery" placeholder="Masukan Judul" required="" />
-													<span>Masukan Gambar</span>
+													
 													<br>
-													<input type="file" id="input-file-now" name="link" required="" />
+													<input type="text" class="form-control m-b-5" name="jdlGalery" placeholder="Masukan Link Video" required="" />
 												</div>
 												<div class="modal-footer">
 													<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
