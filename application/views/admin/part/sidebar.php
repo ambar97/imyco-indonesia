@@ -78,8 +78,8 @@
 							<span>Gallery</span>
 						</a>
 						<ul class="sub-menu">
-							<li><a href="gallery.html">Gallery v1</a></li>
-							<li><a href="gallery_v2.html">Gallery v2</a></li>
+							<li><a href="gallery.html">Foto</a></li>
+							<li><a href="gallery_v2.html">Video</a></li>
 						</ul>
 					</li>
 					<!-- begin sidebar minify button -->
