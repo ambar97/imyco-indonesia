@@ -95,7 +95,7 @@
 											<td >
 												<div align="center">
 													<!-- btn delete -->
-													<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: red;" title="hapus" href=""><i class="fa fa-trash"></i></a>
+													<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: red;" title="hapus" onclick="deleted('<?php echo $foto->idGalery ?>')" href=""><i class="fa fa-trash"></i></a>
 
 													<!-- btn edit -->
 
@@ -124,7 +124,7 @@
 																	</div>
 																	<div class="modal-footer">
 																		<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
-																		<a href="" ><button type="submit" name="btnSimpan"  class="btn btn-danger" >Action</button></a>
+																		<a href="" ><button type="submit" name="btnSi"  class="btn btn-danger" >Action</button></a>
 																	</div>
 																</form>
 															</div>
@@ -170,6 +170,12 @@
 		ga('create', 'UA-53034621-1', 'auto');
 		ga('send', 'pageview');
 
+		function deleted(param){
+                         var proc = window.confirm('Are you sure delete this data?');
+                         if(proc){
+                          document.location='<?php echo base_url(); ?>admin/Galeri/d_galeri/'+param;
+                      }
+                  }
 	</script>
 </body>
 

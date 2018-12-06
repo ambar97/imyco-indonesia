@@ -10,30 +10,24 @@
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-12">
 								<div class="carousel carousel-dots" data-slide="4" data-slide-rs="2" data-autoplay="true" data-nav="false" data-dots="true" data-space="0" data-loop="true" data-speed="800">
-									<!-- Blog Entry #1 -->
-									<div class="portfolio-item filter-restaurent">
-									<div class="portfolio--img">
-                    <img src="<?php echo base_url() ?>master/assets/images/gallery/1.jpg" alt="Dish Image">
-                    <div class="portfolio--hover">
-                        <div class="portfolio--action">
-                            <div class="pos-vertical-center">
-                                <div class="portfolio--zoom">
-                                    <a class="img-gallery-item" href="<?php echo base_url() ?>master/assets/images/gallery/full/1.jpg" title="Dish Image"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- .Portfolio-action end -->
-                    </div>
-                    <!-- .Portfolio-hover end -->
-                </div>
-                </div>
-
-
-
+									<?php foreach ($galery as $gl): ?>
+										<div class="portfolio-item filter-restaurent">
+											<div class="portfolio--img">
+												<img src="<?php echo base_url().$gl->link ?>" alt="Dish Image">
+												<div class="portfolio--hover">
+													<div class="portfolio--action">
+														<div class="pos-vertical-center">
+															<div class="portfolio--zoom">
+																<a class="img-gallery-item" href="<?php echo base_url().$gl->link ?>" title="<?php echo $gl->jdlGalery ?>"></a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>	
+									<?php endforeach ?>
 								</div>
-								<!-- .carousel end -->
 							</div>
-							<!-- .col-md-6 end -->
 						</div>
 					</div>
 				</div>

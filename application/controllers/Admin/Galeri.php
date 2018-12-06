@@ -49,54 +49,47 @@ class Galeri extends CI_Controller {
     }
   }
 
-  function tampildatafoto(){
-  $idGalery = $this->uri->segment(3);
-  $data['galery'] = $this->M_galery->tampildatagalery('Foto')->result();
-  $this->load->view("admin/v_galery",$data);
-  }
-
   function editfotosave(){
-    if(isset($_POST['btnSimpan'])){
-      $config = array('upload_path' => './gallery/Galeri/',
-        'allowed_types'             => 'gif|jpg|png|jpeg',
-        'max_size'                  => '2048'
-      );
-      $this -> load -> library ('upload',$config);
-      if ($this->upload->do_upload('link'))
-      {
-        $id['idGalery']=$this->input->post('idGalery');
+  	$config = array('upload_path' => './gallery/Galeri/',
+      'allowed_types' => 'gif|jpg|png|jpeg'
+    );
+    $this -> load -> library ('upload',$config);
+    $this->upload->do_upload('link');
+    $upload_data = $this -> upload -> data ();
+    $idGalery = $this->input->post('idGambar');
+        $where['idGalery']=$idGalery;
         $upload_data  = $this -> upload -> data ();
         $user         = $this->session->userdata('idAdmin');
         $judul        = $this -> input -> post('jdlGalery');
         $foto         = "gallery/Galeri/".$upload_data['file_name'];
-        $data         = array(
-          'jdlGalery' => $judul,
-          'kategori'  => 'Foto',
-          'link'      => $foto,
-          'action'    => 2
+    if ($upload_data['file_name'] == null) {
+      $data = array(
+          'jdlGalery' => $judul
         );
-                // die(var_dump($data));
-        // $this->db->where('idGalery',$id);
-        $insert_data = $this->db->update('galery',$data,$id);
-
-      }
-      if ($insert_data > 0) {
-
-        // $this->session->set_flashdata("Pesan", $this->core->alert_succes("Data Berhasil di simpan"));
-        redirect(base_url().'admin/Galeri');
-      } else{
-        // $this->session->set_flashdata("Pesan", $this->core->alert_time("Data Gagal di simpan"));
-        redirect(base_url().'admin/Galeri?gagal');
-      }
     }else{
-      // $this->session->set_flashdata("Pesan", $this->core->alert_time("Data Gagal di simpan, cek gambar"));
-      redirect(base_url().'admin/Galeri');
+      $data= array(
+          'jdlGalery' => $judul,
+          'link'      => $foto
+        );
+    }            
+    $update_data = $this->db->update('galery',$data,$where);
+    if ($update_data >= 0) {
+      // $this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di Perbarui"));
+      redirect(base_url().'admin/Galeri?wes');
+    } else{
+      // $this->session->set_flashdata("Pesan",$this->core->alert_time("Data Berhasil di Perbarui"));
+      redirect(base_url().'admin/Galeri?urung');
     }
   }
-  function delete($idGalery){
-    $where = array('idGalery' => $idGalery);
-    $this->M_galery->delete($where,'galery');
-    redirect('admin/Galeri');
-
+  public function d_galeri($id){
+    $where = array('idGalery'=>$id);
+    $hapus = $this->M_galery-> delete($where,'galery');
+    if($hapus >= 0){
+      // $this->session->set_flashdata("Pesan",$this->core->alert_succes("Berhasil di Hapus"));
+      header('location:'.base_url('admin/Galri')); 
+    }else{
+      header('location:'.base_url('admin/galery'));
+      // $this->session->set_flashdata("Pesan",$this->core->alert_time("gagal Hapus"));
+    }
   }
 }
