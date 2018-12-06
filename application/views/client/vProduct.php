@@ -11,12 +11,12 @@
                             <div class="col-xs-12 col-sm-6 col-md-3">
                                 <div class="banner-panel">
                                     <div class="banner--img">
-                                        <img src="<?php echo base_url() ?>master/assets/images/banners/1.jpg" alt="banner img" class="img-responsive">
+                                        <img style="height: 230px;" src="<?php echo base_url() ?>gambar/produk1.png" alt="banner img" class="img-responsive">
                                     </div>
                                     <div class="banner--content">
-                                        <h3>Start eating better</h3>
-                                        <h4>Daily New Fresh Menus</h4>
-                                        <p>Granny help you treat yourself with a different meal everyday, thanks to our daily changing menus and our awesome creative chefs!</p>
+                                        <h3>Mushroom coffee</h3>
+                                        <!-- <h4>Daily New Fresh Menus</h4> -->
+                                        <p> Mushroom Coffee atau Kopi Jamur IMyCo adalah Produk Instan Bubuk Kopi murni dan ektrak jamur yang di buat dari bahan alami tanpa menggunakan bahan pengawet, senyawa kimia pangan dan tanpa perisai</p>
                                     </div>
                                 </div>
                                 <!-- .banner-panel end -->
@@ -24,12 +24,15 @@
                             <div class="col-xs-12 col-sm-6 col-md-3">
                                 <div class="banner-panel">
                                     <div class="banner--img">
-                                        <img src="<?php echo base_url() ?>master/assets/images/banners/1.jpg" alt="banner img" class="img-responsive">
+                                        <img style="height: 230px;" src="<?php echo base_url() ?>gambar/produk2.png" alt="banner img" class="img-responsive">
                                     </div>
                                     <div class="banner--content">
-                                        <h3>Start eating better</h3>
-                                        <h4>Daily New Fresh Menus</h4>
-                                        <p>Granny help you treat yourself with a different meal everyday, thanks to our daily changing menus and our awesome creative chefs!</p>
+                                        <h3>Mushroom Cacao mix</h3>
+                                        <!-- <h4>Daily New Fresh Menus</h4> -->
+                                        <p>Perpaduan ekstrak Jamur Dengan pure raw Cacao cold Process. 
+Menghasilkan cita rasa cacao yang unik dan enak dengan karakter minuman coklat yang berbeda.
+Memberikan efek moodbooster lebih kuat dari minuman coklat umum. 
+</p>
                                     </div>
                                 </div>
                                 <!-- .banner-panel end -->
@@ -37,12 +40,12 @@
                             <div class="col-xs-12 col-sm-6 col-md-3">
                                 <div class="banner-panel">
                                     <div class="banner--img">
-                                        <img src="<?php echo base_url() ?>master/assets/images/banners/1.jpg" alt="banner img" class="img-responsive">
+                                        <img style="height: 230px;" src="<?php echo base_url() ?>gambar/produk3.jpeg" alt="banner img" class="img-responsive">
                                     </div>
                                     <div class="banner--content">
-                                        <h3>Start eating better</h3>
-                                        <h4>Daily New Fresh Menus</h4>
-                                        <p>Granny help you treat yourself with a different meal everyday, thanks to our daily changing menus and our awesome creative chefs!</p>
+                                        <h3>Original Mushroom Powder </h3>
+                                        <!-- <h4>Daily New Fresh Menus</h4> -->
+                                        <p>Terbuat dari 100 % pure oyster mushroom dari petani local di jawa timur yang di budidayakan secara organic. Proses pengeringan menggunakan sinar matahari dan teknik sterilisasi lampu sinar uv.  </p>
                                     </div>
                                 </div>
                                 <!-- .banner-panel end -->
@@ -50,12 +53,12 @@
                             <div class="col-xs-12 col-sm-6 col-md-3">
                                 <div class="banner-panel">
                                     <div class="banner--img">
-                                        <img src="<?php echo base_url() ?>master/assets/images/banners/1.jpg" alt="banner img" class="img-responsive">
+                                        <img style="height: 230px;" src="<?php echo base_url() ?>gambar/produk4.jpeg"  alt="banner img" class="img-responsive">
                                     </div>
                                     <div class="banner--content">
-                                        <h3>Start eating better</h3>
-                                        <h4>Daily New Fresh Menus</h4>
-                                        <p>Granny help you treat yourself with a different meal everyday, thanks to our daily changing menus and our awesome creative chefs!</p>
+                                        <h3>Mushroom Seasoning></h3>
+                                        <!-- <h4>Daily New Fresh Menus</h4> -->
+                                        <p>Pioner bumbu penyedap masakan non msg di Indonesia yang mengkombinasikan ektrak Jamur  Tiram secara alami dengan racikan rempah-rempah pilihan dan bubuk jamur murni.</p>
                                     </div>
                                 </div>
                                 <!-- .banner-panel end -->
