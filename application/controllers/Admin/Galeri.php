@@ -86,9 +86,9 @@ class Galeri extends CI_Controller {
     $hapus = $this->M_galery-> delete($where,'galery');
     if($hapus >= 0){
       // $this->session->set_flashdata("Pesan",$this->core->alert_succes("Berhasil di Hapus"));
-      header('location:'.base_url('admin/Galri')); 
+      header('location:'.base_url('admin/Galeri')); 
     }else{
-      header('location:'.base_url('admin/galery'));
+      header('location:'.base_url('admin/Galeri'));
       // $this->session->set_flashdata("Pesan",$this->core->alert_time("gagal Hapus"));
     }
   }

@@ -95,7 +95,7 @@
 											<td >
 												<div align="center">
 													<!-- btn delete -->
-													<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: red;" title="hapus" onclick="deleted('<?php echo $foto->idGalery ?>')" href=""><i class="fa fa-trash"></i></a>
+													<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: red;" title="hapus" href="<?php echo base_url('Admin/Galeri/d_galeri/'.$foto -> idGalery) ?>"><i class="fa fa-trash"></i></a>
 
 													<!-- btn edit -->
 
