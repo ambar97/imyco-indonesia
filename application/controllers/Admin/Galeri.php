@@ -33,7 +33,7 @@ class Galeri extends CI_Controller {
           'action'    => 2
         );
                 // die(var_dump($data));
-        $insert_data = $this->db->insert('gallery',$data);
+        $insert_data = $this->db->insert('galery',$data);
 
       }
       if ($insert_data > 0) {
