@@ -47,4 +47,9 @@
 	<!-- ================== END PAGE LEVEL JS ================== -->
 
 	<script src="<?php echo base_url()?>/master/admin/dropzone-master/dist/dropzone.js"></script>
+
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="<?php echo base_url()?>/master/admin/assets/plugins/summernote/summernote.min.js"></script>
+	<script src="<?php echo base_url()?>/master/admin/assets/js/demo/form-summernote.demo.min.js"></script>
+	<!-- ================== END PAGE LEVEL JS ================== -->
 	

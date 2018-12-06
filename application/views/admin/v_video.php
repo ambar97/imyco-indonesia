@@ -43,15 +43,16 @@
 												<h4 class="modal-title">Alert Header</h4>
 												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 											</div>
-
+									
 											<div class="modal-body">
 												<form method="post" action="<?php echo base_url('Admin/Video/simpanvideo') ?>">
 												<div class="alert alert-danger m-b-0">
 													<h5><i class="fa fa-info-circle"></i> </h5>
 													<input type="text" class="form-control m-b-5" name="jdlGalery" placeholder="Masukan Judul" required="" />
-													
 													<br>
 													<input type="text" class="form-control m-b-5" name="lnkGalery" placeholder="Masukan Link Video" required="" />
+													<br>
+													<textarea class="summernote" name="content"></textarea>
 												</div>
 												<div class="modal-footer">
 													<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
@@ -120,7 +121,6 @@
 																<h4 class="modal-title">Alert Header</h4>
 																<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 															</div>
-
 															<div class="modal-body">
 																<form method="post" action="<?php echo base_url('Admin/Video/editvideo') ?>" enctype="multipart/form-data">
 																	<div class="alert alert-danger m-b-0">
@@ -132,6 +132,8 @@
 																		<span>Site Url</span>
 																		<input type="text" class="form-control m-b-5" name="link" placeholder="Masukan Judul" required="" value="<?php echo $video->link ?>" />
 																		<input type="text" class="form-control m-b-5" name="idVideo" placeholder="Masukan Judul" required="" value="<?php echo $video->idGalery ?>" hidden />
+																		<br>
+																		<textarea class="summernote" name="content"></textarea>
 																	</div>
 																	<div class="modal-footer">
 																		<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
@@ -168,6 +170,13 @@
 	<!-- end page container -->
 	
 	<?php $this->load->view('admin/part/codejs') ?>
+
+	<script>
+		$(document).ready(function() {
+			App.init();
+			FormSummernote.init();
+		});
+	</script>
 	
 	<script>
 		$(document).ready(function() {

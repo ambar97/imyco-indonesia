@@ -35,6 +35,8 @@
 	<!-- ================== BEGIN PAGE LEVEL STYLE ================== -->
 	<link href="<?php echo base_url()?>/master/admin/assets/plugins/dropzone/min/dropzone.min.css" rel="stylesheet" />
 	<!-- ================== END PAGE LEVEL STYLE ================== -->
-	<link rel="stylesheet" href="<?php echo base_url() ?>master/admin/dropify/dist/css/dropify.min.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>/master/admin/dropify/dist/css/dropify.min.css">
+
+	<link href="<?php echo base_url()?>/master/admin/assets/plugins/summernote/summernote.css" rel="stylesheet" />
 	
 </head>
