@@ -26,13 +26,14 @@ class Galeri extends CI_Controller {
         $judul        = $this -> input -> post('jdlGalery');
         $foto         = "gallery/Galeri/".$upload_data['file_name'];
         $data         = array(
+          'idGalery'=>"",
           'jdlGalery' => $judul,
           'kategori'  => 'Foto',
           'link'      => $foto,
           'action'    => 2
         );
                 // die(var_dump($data));
-        $insert_data = $this->db->insert('galery',$data);
+        $insert_data = $this->db->insert('gallery',$data);
 
       }
       if ($insert_data > 0) {
