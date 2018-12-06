@@ -50,7 +50,7 @@
 						</a>
 						<ul class="sub-menu">
 							<li><a href="<?php echo base_url('Admin/Galeri') ?>">Foto</a></li>
-							<li><a href="<?php echo base_url('Admin/Tambahvideo') ?>">Video</a></li>
+							<li><a href="<?php echo base_url('Admin/Video') ?>">Video</a></li>
 						</ul>
 					</li>
 					<li class="has-sub">

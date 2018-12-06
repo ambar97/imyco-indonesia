@@ -26,6 +26,7 @@ class Galeri extends CI_Controller {
         $judul        = $this -> input -> post('jdlGalery');
         $foto         = "gallery/Galeri/".$upload_data['file_name'];
         $data         = array(
+          'idGalery'=>"",
           'jdlGalery' => $judul,
           'kategori'  => 'Foto',
           'link'      => $foto,
