@@ -63,7 +63,7 @@ class Galeri extends CI_Controller {
       $this -> load -> library ('upload',$config);
       if ($this->upload->do_upload('link'))
       {
-        $id  = $this->input->post('idGalery');
+        $id['idGalery']=$this->input->post('idGalery');
         $upload_data  = $this -> upload -> data ();
         $user         = $this->session->userdata('idAdmin');
         $judul        = $this -> input -> post('jdlGalery');
@@ -75,8 +75,8 @@ class Galeri extends CI_Controller {
           'action'    => 2
         );
                 // die(var_dump($data));
-        $this->db->where('idGalery',$id);
-        $insert_data = $this->db->update('galery',$data);
+        // $this->db->where('idGalery',$id);
+        $insert_data = $this->db->update('galery',$data,$id);
 
       }
       if ($insert_data > 0) {
@@ -92,7 +92,7 @@ class Galeri extends CI_Controller {
       redirect(base_url().'admin/Galeri');
     }
   }
-  function delete(){
+  function delete($idGalery){
     $where = array('idGalery' => $idGalery);
     $this->M_galery->delete($where,'galery');
     redirect('admin/Galeri');

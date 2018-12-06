@@ -111,13 +111,15 @@
 															</div>
 
 															<div class="modal-body">
-																<form method="post" action="<?php echo base_url('Admin/Galeri/simpanfoto') ?>" enctype="multipart/form-data">
+																<form method="post" action="<?php echo base_url('Admin/Galeri/editfotosave') ?>" enctype="multipart/form-data">
 																	<div class="alert alert-danger m-b-0">
 																		<h5><i class="fa fa-info-circle"></i> </h5>
 																		<input type="text" name="idGambar" hidden="" value="<?php echo $foto->idGalery ?>">
+																		<span>Judul Gambar</span>
 																		<input type="text" class="form-control m-b-5" name="jdlGalery" placeholder="Masukan Judul" required="" value="<?php echo $foto->jdlGalery ?>" />
-																		<span>Masukan Gambar</span>
 																		<br>
+																		<span>Masukan Gambar</span>
+
 																		<input type="file" id="input-file-now" name="link" required=""/>
 																	</div>
 																	<div class="modal-footer">
@@ -126,7 +128,7 @@
 																	</div>
 																</form>
 															</div>
-															
+
 														</div>
 													</div>
 												</div>
