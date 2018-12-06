@@ -45,17 +45,17 @@
 											</div>
 
 											<div class="modal-body">
-												<form method="post" action="<?php echo base_url('Admin/Tambahfoto/simpanfoto') ?>">
+												<form method="post" action="<?php echo base_url('Admin/Video/simpanvideo') ?>">
 												<div class="alert alert-danger m-b-0">
 													<h5><i class="fa fa-info-circle"></i> </h5>
 													<input type="text" class="form-control m-b-5" name="jdlGalery" placeholder="Masukan Judul" required="" />
 													
 													<br>
-													<input type="text" class="form-control m-b-5" name="jdlGalery" placeholder="Masukan Link Video" required="" />
+													<input type="text" class="form-control m-b-5" name="lnkGalery" placeholder="Masukan Link Video" required="" />
 												</div>
 												<div class="modal-footer">
 													<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
-													<a href="" ><button type="submit"  class="btn btn-danger" >Action</button></a>
+													<a href="" ><button type="submit"  class="btn btn-danger" name="btnSimpan" >Action</button></a>
 												</div>
 												</form>
 											</div>
@@ -110,14 +110,46 @@
 										<td><?php echo $video->jdlGalery; ?></td>
 										<td><?php echo $video->link; ?></td>
 										<td align="center">
-											<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: red;" title="hapus" href=""><i class="fa fa-trash"></i></a>
-											<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: orange;" title="edit" href=""><i class="fa fa-brush"></i></a>
+											<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: red;" title="hapus" href="<?php echo base_url('Admin/Video/delete/'.$video -> idGalery) ?>"><i class="fa fa-trash"></i></a>
+											<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: orange;" title="edit" href="#modal-alert<?php echo $video->idGalery ?>" data-toggle="modal"><i class="fa fa-brush"></i></a>
 										</td>
+										<div class="modal fade" id="modal-alert<?php echo $video->idGalery ?>">
+													<div class="modal-dialog">
+														<div class="modal-content">
+															<div class="modal-header">
+																<h4 class="modal-title">Alert Header</h4>
+																<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+															</div>
+
+															<div class="modal-body">
+																<form method="post" action="<?php echo base_url('Admin/Video/editvideo') ?>" enctype="multipart/form-data">
+																	<div class="alert alert-danger m-b-0">
+																		<h5><i class="fa fa-info-circle"></i> </h5>
+																		<input type="text" name="idGambar" hidden="" value="<?php echo $video->idGalery ?>">
+																		<span>Judul Gambar</span>
+																		<input type="text" class="form-control m-b-5" name="jdlGalery" placeholder="Masukan Judul" required="" value="<?php echo $video->jdlGalery ?>" />
+																		<br>
+																		<span>Site Url</span>
+																		<input type="text" class="form-control m-b-5" name="link" placeholder="Masukan Judul" required="" value="<?php echo $video->link ?>" />
+																		<input type="text" class="form-control m-b-5" name="idVideo" placeholder="Masukan Judul" required="" value="<?php echo $video->idGalery ?>" hidden />
+																	</div>
+																	<div class="modal-footer">
+																		<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
+																		<a href="" ><button type="submit" name="btnSimpan"  class="btn btn-danger" >Action</button></a>
+																	</div>
+																</form>
+															</div>
+
+														</div>
+													</div>
+												</div>
+
 									</tr>
 								<?php } ?>
 								</tbody>
 							</table>
 						</div>
+
 						<!-- end panel-body -->
 					</div>
 					<!-- end panel -->

@@ -13,33 +13,66 @@ class Video extends CI_Controller {
 	
 	}
 	function simpanvideo(){
-		$dir 						= 'galery/';
-		$config['upload_path']      = 'galery/';
-		$config['allowed_types']    = 'jpg|png|jpeg';
-		$config['max_size']         = '2048';
-		$this->load->library('upload', $config);
-		$this->upload->initialize($config); 
-		if (!$this->upload->do_upload('link')) {
-			echo $this->upload->display_errors();
-		}else{
-			$simpangambar = array(
-				'jdlGalery' 	=> $this->input->post('jdlGalery'),
-				'id_Galery'		=> $this->session->userdata("id_Galery"),	
-				'kategori'		=> $this->input->post('kategori'),
-				'action' 		=> $this->input->post('action'),
-				'link'			=> $dir.$this->upload->data('link'),
+		if (isset($_POST['btnSimpan'])) {
+			$user         = $this->session->userdata('idAdmin');
+			$j_galery= $this -> input -> post('jdlGalery');
+			$lk_galery= $this -> input -> post('lnkGalery');
+			$data = array(
+				'jdlGalery' => $j_galery,
+				'kategori'  => 'Video',
+				'link'      => $lk_galery,
+				'action'    => 2
 			);
-			$this->db->insert('galery',$simpangambar);
-				redirect('Admin/v_video	');
-		}
-	}
+			 $insert_data = $this->db->insert('galery',$data);
+
+      }
+      if ($insert_data > 0) {
+        // $this->session->set_flashdata("Pesan", $this->core->alert_succes("Data Berhasil di simpan"));
+        redirect(base_url().'admin/Video');
+      }else{
+        // $this->session->set_flashdata("Pesan", $this->core->alert_time("Data Gagal di simpan"));
+        redirect(base_url().'admin/Video');
+    }
+}
+
 	function editvideo(){
+		if (isset($_POST['btnSimpan'])) {
+			$idGalery = $this->input->post('idVideo');
+			$where['idGalery']=$idGalery;
+			$user         = $this->session->userdata('idAdmin');
+			$j_galery= $this -> input -> post('jdlGalery');
+			$lk_galery= $this -> input -> post('link');
+			$data = array(
+				'jdlGalery' => $j_galery,
+				'kategori'  => 'Video',
+				'link'      => $lk_galery,
+				'action'    => 2
+			);
+			 $insert_data = $this->db->update('galery',$data,$where);
+
+      }
+      if ($insert_data > 0) {
+        // $this->session->set_flashdata("Pesan", $this->core->alert_succes("Data Berhasil di simpan"));
+        redirect(base_url().'admin/Video');
+      }else{
+        // $this->session->set_flashdata("Pesan", $this->core->alert_time("Data Gagal di simpan"));
+        redirect(base_url().'admin/Video');
+    }
 
 	}
 	function updatevideo(){
 
 	}
 	function delete(){
+	$where = array('idGalery'=>$id);
+    $hapus = $this->M_galery-> delete($where,'galery');
+    if($hapus >= 0){
+      // $this->session->set_flashdata("Pesan",$this->core->alert_succes("Berhasil di Hapus"));
+      header('location:'.base_url('admin/Video')); 
+    }else{
+      header('location:'.base_url('admin/Video'));
+      // $this->session->set_flashdata("Pesan",$this->core->alert_time("gagal Hapus"));
+    }
 		
 	}
 }
