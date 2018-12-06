@@ -10,7 +10,7 @@
 		<div class="login login-with-news-feed">
 			<!-- begin news-feed -->
 			<div class="news-feed">
-				<div class="news-image" style="background-image: url(<?php echo base_url() ?>master/admin/assets/img/login-bg/login-bg-11.jpg)"></div>
+				<div class="news-image" style="background-image: url(<?php echo base_url() ?>gambar/slider.jpeg)"></div>
 				<div class="news-caption">
 					<h4 class="caption-title"><b>IMyCo</b> Admin App</h4>
 					<p>

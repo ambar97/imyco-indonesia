@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>master/assets/revolution/css/settings.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>master/assets/revolution/css/layers.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>master/assets/revolution/css/navigation.css">
+    <link href="<?php echo base_url() ?>master/admin/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>

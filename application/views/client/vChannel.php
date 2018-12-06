@@ -9,7 +9,7 @@
 					<div class="tab-pane fade in active banner banner-1" id="About">
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-12">
-								<div class="carousel carousel-dots" data-slide="4" data-slide-rs="2" data-autoplay="true" data-nav="false" data-dots="true" data-space="0" data-loop="true" data-speed="800">
+								<div class="carousel carousel-dots" data-slide="" data-slide-rs="2" data-autoplay="true" data-nav="false" data-dots="true" data-space="0" data-loop="true" data-speed="800">
 									<!-- Blog Entry #1 -->
 									<div class="portfolio-item filter-restaurent">
 									<div class="portfolio--img">

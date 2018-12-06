@@ -123,6 +123,9 @@
 	ga('send', 'pageview');
 
 </script>
+<?php if ($this->session->flashdata()) { ?>
+                        <?php echo $this->session->flashdata('Pesan'); ?>                   
+                    <?php } ?>
 </body>
 
 <!-- Mirrored from seantheme.com/color-admin-v4.2/admin/html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Dec 2018 03:36:58 GMT -->
