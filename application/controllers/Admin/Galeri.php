@@ -15,54 +15,37 @@ class Galeri extends CI_Controller {
 	function simpanfoto(){
 		if(isset($_POST['btnSimpan'])){
           $config = array('upload_path' => './gallery/Galeri/',
-                  'allowed_types' => 'gif|jpg|png|jpeg'
+                  'allowed_types' => 'gif|jpg|png|jpeg',
+                  'max_size' => '2048'
                   );
           $this -> load -> library ('upload',$config);
           if ($this->upload->do_upload('link'))
         {
             $upload_data = $this -> upload -> data ();
+            $user = $this->session->userdata('idAdmin');
             $judul = $this -> input -> post('jdlGalery');
             $foto = "gallery/Galeri/".$upload_data['file_name'];
         $data = array(
-        'jdlGaleri' => $judul,
-        'gambar_galeri' => $foto
+        'jdlGalery' => $judul,
+        'kategori' => 'Foto',
+        'link'=> $foto,
+        'action'=> 2
         );
-        $insert_data = $this->db->insert('galeri',$data);
+                // die(var_dump($data));
+        $insert_data = $this->db->insert('galery',$data);
+
       }
-      if ($insert_data >= 0) {
-        $this->session->set_flashdata("Pesan", $this->core->alert_succes("Data Berhasil di simpan"));
-        redirect(base_url().'admin/Galery');
+      if ($insert_data > 0) {
+        // $this->session->set_flashdata("Pesan", $this->core->alert_succes("Data Berhasil di simpan"));
+        redirect(base_url().'admin/Galeri?sukses');
        } else{
-        $this->session->set_flashdata("Pesan", $this->core->alert_time("Data Gagal di simpan"));
-        redirect(base_url().'admin/Galery');
+        // $this->session->set_flashdata("Pesan", $this->core->alert_time("Data Gagal di simpan"));
+        redirect(base_url().'admin/Galeri?gagal');
        }
     }else{
-      $this->session->set_flashdata("Pesan", $this->core->alert_time("Data Gagal di simpan, cek gambar"));
+      // $this->session->set_flashdata("Pesan", $this->core->alert_time("Data Gagal di simpan, cek gambar"));
+    	redirect(base_url().'admin/Galeri');
     }
-
-
-
-
-
-		$dir 						= 'galery/';
-		$config['upload_path']      = 'galery/';
-		$config['allowed_types']    = 'jpg|png|jpeg';
-		$config['max_size']         = '2048';
-		$this->load->library('upload', $config);
-		$this->upload->initialize($config); 
-		if (!$this->upload->do_upload('link')) {
-			echo $this->upload->display_errors();
-		}else{
-			$simpanvideo = array(
-				'jdlGalery' 	=> $this->input->post('jdlGalery'),
-				'id_Galery'		=> $this->session->userdata("id_Galery"),	
-				'kategori'		=> $this->input->post('kategori'),
-				'action' 		=> $this->input->post('action'),
-				'link'			=> $dir.$this->upload->data('link'),
-			);
-			$this->db->insert('galery',$simpanvideo);
-				redirect('Admin/v_galery');
-		}
 	}
 	function editfoto(){
 

@@ -1,14 +1,14 @@
 <body style="background-image: url(<?php echo base_url()?>master/desain.jpg);">
-    <!-- <div class="preloader">
-    <div class="spinner">
-        <div class="bounce1"></div>
-        <div class="bounce2"></div>
-        <div class="bounce3"></div>
+    <div class="preloader">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
     </div>
-</div> -->
     <!-- Document Wrapper
-       ============================================= -->
-       <div id="wrapper" class="wrapper clearfix">
+     ============================================= -->
+     <div id="wrapper" class="wrapper clearfix">
         <header id="navbar-spy" class="header header-1 header-transparent header-bordered header-fixed">
             <nav id="primary-menu" class="navbar navbar-fixed-top">
                 <div class="container">
@@ -21,12 +21,12 @@
                             <span class="icon-bar"></span>
                         </button>
                         <a class="logo" href="index.html">
-                           <img height="80px;" class="logo-light" src="<?php echo base_url()?>gambar/logo.png" alt="granny Logo">
-                           <img height="80px;" class="logo-dark" src="<?php echo base_url()?>gambar/logo1.png" alt="granny Logo">
-                       </a>
-                   </div>
+                         <img height="80px;" class="logo-light" src="<?php echo base_url()?>gambar/logo.png" alt="granny Logo">
+                         <img height="80px;" class="logo-dark" src="<?php echo base_url()?>gambar/logo1.png" alt="granny Logo">
+                     </a>
+                 </div>
 
-                   <div class="module-container pull-right">
+                 <div class="module-container pull-right">
                     <!-- Module Reservation  -->
                     <div class="module module-reservation">
                         <a class="btn-popup" data-toggle="modal" data-target="#reservationModule"><i class="lnr lnr-users"></i>Reservation</a>
@@ -145,62 +145,36 @@
 <div class="collapse navbar-collapse pull-right" id="navbar-collapse-1">
     <ul class="nav navbar-nav nav-pos-right navbar-left">
         <!-- Home Menu -->
-        <li class="has-dropdown mega-dropdown <?php if($this->uri->segment('1')=="Home#satu"){ echo "active";}?>">
-            <a href="#satu" class="dropdown-toggle menu-item">Home</a>
+        <li class="<?php if($this->uri->segment('1')=="Home"){ echo "active";}?>">
+            <a href="#satu" class="menu-item">Home</a>
 
             <!-- .mega-dropdown-menu end -->
         </li>
-        <li class="has-dropdown mega-dropdown ">
-            <a href="#about" class="dropdown-toggle menu-item">About</a>
+        <li >
+            <a href="#about" class="menu-item">About</a>
 
             <!-- .mega-dropdown-menu end -->
         </li>
-        <li class="has-dropdown mega-dropdown ">
-            <a href="#produk" class="dropdown-toggle menu-item">Produk</a>
+        <li >
+            <a href="#produk" class="menu-item">Product</a>
 
             <!-- .mega-dropdown-menu end -->
         </li>
-        <!-- li end -->
-
-        <!-- About Menu -->
-<!-- <li class="has-dropdown">
-    <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">About</a>
-    <ul class="dropdown-menu">
         <li>
-            <a href="page-about.html">our story</a>
+            <a class="menu-item" href="#gallery">gallery</a>
         </li>
-        <li>
-            <a href="page-chefs.html">our chefs</a>
+        <li >
+            <a class="menu-item " href="#channel" >Channel</a>
+            
+            <!-- .mega-dropdown-menu end -->
         </li>
-        <li>
-            <a href="page-contacts.html">contact us</a>
-        </li>
-        <li>
-            <a href="page-faqs.html">FAQs</a>
-        </li>
-        <li>
-            <a href="page-guestbook.html">guestbook</a>
-        </li>
-        <li>
-            <a href="page-reservation.html">online reservation</a>
+        <li >
+            <a class="menu-item " href="#contact" >Contact</a>
+            
+            <!-- .mega-dropdown-menu end -->
         </li>
 
     </ul>
-</li> -->
-<!-- li end -->
-
-<!-- li end -->
-
-<li>
-    <a class="menu-item" href="#gallery">gallery</a>
-</li>
-<li >
-    <a class="menu-item " href="#channel" >Channel</a>
-    
-    <!-- .mega-dropdown-menu end -->
-</li>
-
-</ul>
 </div>
 <!-- /.navbar-collapse -->
 </div>

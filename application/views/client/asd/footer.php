@@ -1,4 +1,4 @@
-<footer id="footer" class="footer footer-1 text-center">
+<footer id="footer" class="footer footer-1 text-center" style="padding-top: 0px;">
     <!-- Widget Section
 	============================================= -->
     <div class="footer--widget text--center">
@@ -7,7 +7,8 @@
                 <div class="col-xs-12 col-sm-3 col-md-4">
                     <div class="footer--widget-content">
                         <h3>Our address</h3>
-                        <p>22 Alnahas Building, 2 AlBahr St, Tanta<br> Al-Gharbia Governorate, Egypt</p>
+                        <p>Perum Griya Mangli Indah Aj 09, Kaliwates,
+                  jember, 68136<br> Jawa Timur - Indonesia</p>
                         <a class="link--styled" href="#">View On Map</a>
                     </div>
                 </div>

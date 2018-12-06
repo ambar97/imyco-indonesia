@@ -48,7 +48,7 @@
 											</div>
 
 											<div class="modal-body">
-												<form method="post" action="<?php echo base_url('Admin/Tambahfoto/simpanfoto') ?>">
+												<form method="post" action="<?php echo base_url('Admin/Galeri/simpanfoto') ?>" enctype="multipart/form-data">
 												<div class="alert alert-danger m-b-0">
 													<h5><i class="fa fa-info-circle"></i> </h5>
 													<input type="text" class="form-control m-b-5" name="jdlGalery" placeholder="Masukan Judul" required="" />
@@ -58,7 +58,7 @@
 												</div>
 												<div class="modal-footer">
 													<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
-													<a href="" ><button type="submit"  class="btn btn-danger" >Action</button></a>
+													<a href="" ><button type="submit" name="btnSimpan"  class="btn btn-danger" >Action</button></a>
 												</div>
 												</form>
 											</div>
@@ -91,7 +91,7 @@
 									<tr class="odd gradeX">
 										<td width="1%" class="f-s-600 text-inverse"><?php echo  $no++ ?></td>
 										<td><?php echo $foto->jdlGalery; ?></td>
-										<td width="1%" class="with-img"><img src="<?php echo base_url($foto->link)?>/master/admin/assets/img/user/user-1.jpg" class="img-rounded height-30" /></td>
+										<td width="1%" class="with-img"><img src="<?php echo base_url().$foto->link ?>" class="img-rounded height-30" /></td>
 										<td align="center">
 											<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: red;" title="hapus" href=""><i class="fa fa-trash"></i></a>
 											<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: orange;" title="edit" href=""><i class="fa fa-brush"></i></a>
