@@ -94,42 +94,42 @@
 											<td width="1%" class="with-img"><img src="<?php echo base_url().$foto->link ?>" class="img-rounded height-30" /></td>
 											<td >
 												<div align="center">
-												<!-- btn delete -->
-												<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: red;" title="hapus" href=""><i class="fa fa-trash"></i></a>
+													<!-- btn delete -->
+													<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: red;" title="hapus" href=""><i class="fa fa-trash"></i></a>
 
-												<!-- btn edit -->
+													<!-- btn edit -->
 
-												<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: orange;" title="edit" href="#modal-alert<?php echo $foto->idGalery ?>" data-toggle="modal"><i class="fa fa-brush"></i></a>	
+													<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: orange;" title="edit" href="#modal-alert<?php echo $foto->idGalery ?>" data-toggle="modal"><i class="fa fa-brush"></i></a>	
 												</div>
 												
 												<div class="modal fade" id="modal-alert<?php echo $foto->idGalery ?>">
-									<div class="modal-dialog">
-										<div class="modal-content">
-											<div class="modal-header">
-												<h4 class="modal-title">Alert Header</h4>
-												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-											</div>
+													<div class="modal-dialog">
+														<div class="modal-content">
+															<div class="modal-header">
+																<h4 class="modal-title">Alert Header</h4>
+																<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+															</div>
 
-											<div class="modal-body">
-												<form method="post" action="<?php echo base_url('Admin/Galeri/simpanfoto') ?>" enctype="multipart/form-data">
-													<div class="alert alert-danger m-b-0">
-														<h5><i class="fa fa-info-circle"></i> </h5>
-														<input type="text" name="idGambar" hidden="" value="<?php echo $foto->idGalery ?>">
-														<input type="text" class="form-control m-b-5" name="jdlGalery" placeholder="Masukan Judul" required="" value="<?php echo $foto->jdlGalery ?>" />
-														<span>Masukan Gambar</span>
-														<br>
-														<input type="file" id="input-file-now" name="link" required=""/>
+															<div class="modal-body">
+																<form method="post" action="<?php echo base_url('Admin/Galeri/simpanfoto') ?>" enctype="multipart/form-data">
+																	<div class="alert alert-danger m-b-0">
+																		<h5><i class="fa fa-info-circle"></i> </h5>
+																		<input type="text" name="idGambar" hidden="" value="<?php echo $foto->idGalery ?>">
+																		<input type="text" class="form-control m-b-5" name="jdlGalery" placeholder="Masukan Judul" required="" value="<?php echo $foto->jdlGalery ?>" />
+																		<span>Masukan Gambar</span>
+																		<br>
+																		<input type="file" id="input-file-now" name="link" required=""/>
+																	</div>
+																	<div class="modal-footer">
+																		<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
+																		<a href="" ><button type="submit" name="btnSimpan"  class="btn btn-danger" >Action</button></a>
+																	</div>
+																</form>
+															</div>
+															
+														</div>
 													</div>
-													<div class="modal-footer">
-														<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
-														<a href="" ><button type="submit" name="btnSimpan"  class="btn btn-danger" >Action</button></a>
-													</div>
-												</form>
-											</div>
-											
-										</div>
-									</div>
-								</div>
+												</div>
 
 											</td>
 										</tr>
