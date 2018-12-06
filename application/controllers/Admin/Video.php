@@ -63,7 +63,7 @@ class Video extends CI_Controller {
 	function updatevideo(){
 
 	}
-	function delete(){
+	function delete($id){
 	$where = array('idGalery'=>$id);
     $hapus = $this->M_galery-> delete($where,'galery');
     if($hapus >= 0){
