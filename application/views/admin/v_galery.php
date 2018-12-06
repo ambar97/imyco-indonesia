@@ -120,7 +120,7 @@
 																		<br>
 																		<span>Masukan Gambar</span>
 
-																		<input type="file" id="input-file-now" name="link" required=""/>
+																		<input type="file" id="input-file-now" name="link"/>
 																	</div>
 																	<div class="modal-footer">
 																		<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>

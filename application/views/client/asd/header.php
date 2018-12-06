@@ -1,11 +1,11 @@
 <body style="background-image: url(<?php echo base_url()?>master/desain.jpg);">
-    <div class="preloader">
+    <!-- <div class="preloader">
         <div class="spinner">
             <div class="bounce1"></div>
             <div class="bounce2"></div>
             <div class="bounce3"></div>
         </div>
-    </div>
+    </div> -->
     <!-- Document Wrapper
      ============================================= -->
      <div id="wrapper" class="wrapper clearfix">
@@ -21,15 +21,15 @@
                             <span class="icon-bar"></span>
                         </button>
                         <a class="logo" href="index.html">
-                         <img height="80px;" class="logo-light" src="<?php echo base_url()?>gambar/logo.png" alt="granny Logo">
-                         <img height="80px;" class="logo-dark" src="<?php echo base_url()?>gambar/logo1.png" alt="granny Logo">
+                         <img height="80px;" class="logo-light" src="<?php echo base_url() ?>gambar/logoku.png" alt="granny Logo">
+                         <img height="90px;" class="logo-dark" src="<?php echo base_url() ?>gambar/IMyCo.png" alt="granny Logo">
                      </a>
                  </div>
 
                  <div class="module-container pull-right">
                     <!-- Module Reservation  -->
                     <div class="module module-reservation">
-                        <a class="btn-popup" data-toggle="modal" data-target="#reservationModule"><i class="lnr lnr-users"></i>Reservation</a>
+                        <!-- <a class="btn-popup" data-toggle="modal" data-target="#reservationModule"><i class="lnr lnr-users"></i>Reservation</a> -->
                         <div class="modal fade reservation-popup" tabindex="-1" role="dialog" id="reservationModule">
                             <div class="modal-dialog modal-lg" role="document">
                                 <div class="modal-content">
@@ -138,6 +138,12 @@
     </div>
 </div>
 </div>
+<div class="module module-side-nav">
+                        <div class="module-icon side-nav-icon">
+                            <a href="<?php echo base_url('Login') ?>"><i class="fa fa-sign-in"></i></a>
+                            <span class="title">Login Admin</span>
+                        </div>
+                    </div>
 </div>
 <!-- .module-container end -->
 
@@ -165,12 +171,12 @@
         </li>
         <li >
             <a class="menu-item " href="#channel" >Channel</a>
-            
+
             <!-- .mega-dropdown-menu end -->
         </li>
         <li >
             <a class="menu-item " href="#contact" >Contact</a>
-            
+
             <!-- .mega-dropdown-menu end -->
         </li>
 

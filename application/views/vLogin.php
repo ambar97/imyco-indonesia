@@ -20,11 +20,12 @@
 			</div>
 			<!-- end news-feed -->
 			<!-- begin right-content -->
+			<img src="<?php echo base_url() ?>master/IMyCo.png">
 			<div class="right-content">
 				<!-- begin login-header -->
 				<div class="login-header">
 					<div class="brand">
-						<span class="logo"></span> <b>IMyCo</b> Admin
+						<a style="color: black;" href="<?php echo base_url() ?>"><span class="logo"></span> <b>IMyCo</b> Admin</a>
 						<!-- <small>responsive bootstrap 3 admin template</small> -->
 					</div>
 					<div class="icon">
