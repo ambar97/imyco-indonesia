@@ -35,12 +35,12 @@
 					<div class="panel panel-inverse">	
 						<div class="panel-body">
 							<div >
-								<a href="#modal-alert" data-toggle="modal"  ><button style="width: 20%;" class="btn  btn-primary " type="submit">Insert</button></a>
-								<div class="modal fade" id="modal-alert">
-									<div class="modal-dialog">
+								<a href="#modal-alert" data-toggle="modal" data-target=".bd-example-modal-lg"  ><button style="width: 20%;" class="btn  btn-primary " type="submit">Insert</button></a>
+								<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="modal-alert">
+									<div class="modal-dialog modal-lg">
 										<div class="modal-content">
 											<div class="modal-header">
-												<h4 class="modal-title">Alert Header</h4>
+												<h4 class="modal-title">Tambah Video (+)</h4>
 												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 											</div>
 									
@@ -50,9 +50,9 @@
 													<h5><i class="fa fa-info-circle"></i> </h5>
 													<input type="text" class="form-control m-b-5" name="jdlGalery" placeholder="Masukan Judul" required="" />
 													<br>
-													<input type="text" class="form-control m-b-5" name="lnkGalery" placeholder="Masukan Link Video" required="" />
+													<!-- <input type="text" class="form-control m-b-5" name="lnkGalery" placeholder="Masukan Link Video" required="" /> -->
 													<br>
-													<textarea class="summernote" name="content"></textarea>
+													<textarea class="summernote" name="lnkGalery"></textarea>
 												</div>
 												<div class="modal-footer">
 													<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
@@ -109,16 +109,16 @@
 									<tr class="odd gradeX">
 										<td width="1%" class="f-s-600 text-inverse"><?php echo  $no++ ?></td>
 										<td><?php echo $video->jdlGalery; ?></td>
-										<td><?php echo $video->link; ?></td>
+										<td> <center><?php echo $video->link; ?></center></td>
 										<td align="center">
 											<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: red;" title="hapus" href="<?php echo base_url('Admin/Video/delete/'.$video -> idGalery) ?>"><i class="fa fa-trash"></i></a>
 											<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: orange;" title="edit" href="#modal-alert<?php echo $video->idGalery ?>" data-toggle="modal"><i class="fa fa-brush"></i></a>
 										</td>
 										<div class="modal fade" id="modal-alert<?php echo $video->idGalery ?>">
-													<div class="modal-dialog">
+													<div class="modal-dialog modal-lg">
 														<div class="modal-content">
 															<div class="modal-header">
-																<h4 class="modal-title">Alert Header</h4>
+																<h4 class="modal-title">Edit Video</h4>
 																<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 															</div>
 															<div class="modal-body">
@@ -129,11 +129,11 @@
 																		<span>Judul Gambar</span>
 																		<input type="text" class="form-control m-b-5" name="jdlGalery" placeholder="Masukan Judul" required="" value="<?php echo $video->jdlGalery ?>" />
 																		<br>
-																		<span>Site Url</span>
-																		<input type="text" class="form-control m-b-5" name="link" placeholder="Masukan Judul" required="" value="<?php echo $video->link ?>" />
+																		<!-- <span>Site Url</span>
+																		<input type="text" class="form-control m-b-5" name="link" placeholder="Masukan Judul" required="" value="<?php echo $video->link ?>" /> -->
 																		<input type="text" class="form-control m-b-5" name="idVideo" placeholder="Masukan Judul" required="" value="<?php echo $video->idGalery ?>" hidden />
 																		<br>
-																		<textarea class="summernote" name="content"></textarea>
+																		<textarea class="summernote" name="link"><?php echo $video->link ?></textarea>
 																	</div>
 																	<div class="modal-footer">
 																		<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>

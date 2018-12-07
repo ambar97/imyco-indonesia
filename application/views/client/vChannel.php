@@ -12,24 +12,21 @@
 								<div class="carousel carousel-dots" data-slide="" data-slide-rs="2" data-autoplay="true" data-nav="false" data-dots="true" data-space="0" data-loop="true" data-speed="800">
 									<!-- Blog Entry #1 -->
 									<div class="portfolio-item filter-restaurent">
-									<div class="portfolio--img">
-                    <img src="<?php echo base_url() ?>master/assets/images/gallery/1.jpg" alt="Dish Image">
-                    <div class="portfolio--hover">
-                        <div class="portfolio--action">
-                            <div class="pos-vertical-center">
-                                <div class="portfolio--zoom">
-                                    <a class="img-gallery-item" href="<?php echo base_url() ?>master/assets/images/gallery/full/1.jpg" title="Dish Image"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- .Portfolio-action end -->
-                    </div>
-                    <!-- .Portfolio-hover end -->
-                </div>
-                </div>
-
-
-
+										<div class="portfolio--img">
+					                    <img src="<?php echo base_url() ?>master/assets/images/gallery/1.jpg" alt="Dish Image">
+					                    <div class="portfolio--hover">
+					                        <div class="portfolio--action">
+					                            <div class="pos-vertical-center">
+					                                <div class="portfolio--zoom">
+					                                    <a class="img-gallery-item" href="<?php echo base_url() ?>master/assets/images/gallery/full/1.jpg" title="Dish Image"></a>
+					                                </div>
+					                            </div>
+					                        </div>
+					                        <!-- .Portfolio-action end -->
+					                    </div>
+					                    <!-- .Portfolio-hover end -->
+					                	</div>
+				                	</div>
 								</div>
 								<!-- .carousel end -->
 							</div>
