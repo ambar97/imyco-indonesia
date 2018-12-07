@@ -11,7 +11,7 @@
     <!--IE Compatibility Meta-->
     <meta name="author" content="zytheme" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Elegant Restaurant & Cafe Html5 Template">
+    <!-- <meta name="description" content="Elegant Restaurant & Cafe Html5 Template"> -->
     <link href="assets/images/favicon/favicon.png" rel="icon">
 
     <!-- Fonts
@@ -29,14 +29,5 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>master/assets/revolution/css/layers.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>master/assets/revolution/css/navigation.css">
     <link href="<?php echo base_url() ?>master/admin/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-    <!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.js"></script>
-      <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Document Title
-    ============================================= -->
     <title>IMyCo Indonesia</title>
 </head>

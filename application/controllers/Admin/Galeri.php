@@ -8,12 +8,8 @@ class Galeri extends CI_Controller {
 		$this->load->model('M_galery');
 	}
 	public function index(){
-		if(!$this->session->userdata('status') == 'login'){
-			redirect('Login');
-		}else{
 		$data['galery'] = $this->M_galery->tampildatagalery('Foto')->result();
 		$this->load->view("admin/v_galery",$data);
-	}
 
 	}
 	function simpanfoto(){
@@ -43,14 +39,14 @@ class Galeri extends CI_Controller {
       }
       if ($insert_data > 0) {
         // $this->session->set_flashdata("Pesan", $this->core->alert_succes("Data Berhasil di simpan"));
-        redirect(base_url().'admin/Galeri?sukses');
+        redirect(base_url().'Admin/Galeri');
       } else{
         // $this->session->set_flashdata("Pesan", $this->core->alert_time("Data Gagal di simpan"));
-        redirect(base_url().'admin/Galeri?gagal');
+        redirect(base_url().'Admin/Galeri');
       }
     }else{          
       // $this->session->set_flashdata("Pesan", $this->core->alert_time("Data Gagal di simpan, cek gambar"));
-    	redirect(base_url().'admin/Galeri');
+    	redirect(base_url().'Admin/Galeri');
     }
   }
 
@@ -81,20 +77,20 @@ class Galeri extends CI_Controller {
     $update_data = $this->db->update('galery',$data,$where);
     if ($update_data >= 0) {
       // $this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di Perbarui"));
-      redirect(base_url().'admin/Galeri?wes');
+      redirect(base_url().'Admin/Galeri');
     } else{
       // $this->session->set_flashdata("Pesan",$this->core->alert_time("Data Berhasil di Perbarui"));
-      redirect(base_url().'admin/Galeri?urung');
+      redirect(base_url().'Admin/Galeri');
     }
   }
   public function d_galeri($id){
     $where = array('idGalery'=>$id);
-    $hapus = $this->Umum-> delete($where,'galery');
+    $hapus = $this->Umum->delete($where,'galery');
     if($hapus >= 0){
       // $this->session->set_flashdata("Pesan",$this->core->alert_succes("Berhasil di Hapus"));
-      header('location:'.base_url('admin/Galeri')); 
+      header('location:'.base_url('Admin/Galeri')); 
     }else{
-      header('location:'.base_url('admin/Galeri'));
+      header('location:'.base_url('Admin/Galeri'));
       // $this->session->set_flashdata("Pesan",$this->core->alert_time("gagal Hapus"));
     }
   }

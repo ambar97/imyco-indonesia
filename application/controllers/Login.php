@@ -6,7 +6,7 @@ class Login extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('M_Login');
-		$this->load->model('alert');
+		// $this->load->model('alert');
 	}
 	public function index()
 	{
@@ -31,22 +31,22 @@ class Login extends CI_Controller {
 				);
 				// echo "berhasil";
 				$this->session->set_userdata($data_session);
-				$this->session->set_flashdata("Pesan",$this->alert->alert_succes("Login sukses"));
+				// $this->session->set_flashdata("Pesan",$this->alert->alert_succes("Login sukses"));
 				redirect(base_url("Admin/Admin"));
 			} else{
 				echo "Gagal";
-				$this->session->set_flashdata("Pesan",$this->alert->alert_time("Password Belum terdaftar"));
+				// $this->session->set_flashdata("Pesan",$this->alert->alert_time("Password Belum terdaftar"));
 			}
 			
 		}else{
 			echo "berhasil";
-			$this->session->set_flashdata("Pesan",$this->alert->alert_time("Username & Password tidak terdaftar"));
+			// $this->session->set_flashdata("Pesan",$this->alert->alert_time("Username & Password tidak terdaftar"));
 			redirect(base_url("Login?"));
 		}
 	}
 	function logout(){
 		$this->session->sess_destroy();
-		$this->session->set_flashdata("Pesan",$this->alert->alert_succes("Login sukses"));
+		// $this->session->set_flashdata("Pesan",$this->alert->alert_succes("Login sukses"));
 		redirect(base_url('Login'));
 	}
 }

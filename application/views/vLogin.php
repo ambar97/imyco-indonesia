@@ -1,91 +1,47 @@
-<?php $this->load->view('admin/part/head') ?>
-<body class="pace-top bg-white">
-	<!-- begin #page-loader -->
-	<div id="page-loader" class="fade show"><span class="spinner"></span></div>
-	<!-- end #page-loader -->
-	
-	<!-- begin #page-container -->
-	<div id="page-container" class="fade">
-		<!-- begin login -->
-		<div class="login login-with-news-feed">
-			<!-- begin news-feed -->
-			<div class="news-feed">
-				<div class="news-image" style="background-image: url(<?php echo base_url() ?>gambar/slider.jpeg)"></div>
-				<div class="news-caption">
-					<h4 class="caption-title"><b>IMyCo</b> Admin App</h4>
-					<p>
-						
-					</p>
-				</div>
-			</div>
-			<!-- end news-feed -->
-			<!-- begin right-content -->
-			<img src="<?php echo base_url() ?>master/IMyCo.png">
-			<div class="right-content">
-				<!-- begin login-header -->
-				<div class="login-header">
-					<div class="brand">
-						<a style="color: black;" href="<?php echo base_url() ?>"><span class="logo"></span> <b>IMyCo</b> Admin</a>
-						<!-- <small>responsive bootstrap 3 admin template</small> -->
-					</div>
-					<div class="icon">
-						<i class="fa fa-sign-in"></i>
-					</div>
-				</div>
-				<!-- end login-header -->
-				<!-- begin login-content -->
-				<div class="login-content">
-					<form action="<?php echo base_url('Login/melbu') ?>" method="post" class="margin-bottom-0">
-						<div class="form-group m-b-15">
-							<input type="text" class="form-control form-control-lg" placeholder="Email Address" required name="username" />
-						</div>
-						<div class="form-group m-b-15">
-							<input name="psw" type="password" class="form-control form-control-lg" placeholder="Password" required />
-						</div>
-						<div class="checkbox checkbox-css m-b-30">
-							<input type="checkbox" id="remember_me_checkbox" value="" />
-							<label for="remember_me_checkbox">
-							Remember Me
-							</label>
-						</div>
-						<div class="login-buttons">
-							<button type="submit" class="btn btn-success btn-block btn-lg">Sign In</button>
-						</div>
-						<!-- <div class="m-t-20 m-b-40 p-b-40 text-inverse">
-							Not a member yet? Click <a href="register_v3.html" class="text-success">here</a> to register.
-						</div> -->
-						<hr />
-						<p class="text-center text-grey-darker">
-							&copy; Jemberkita All Right Reserved 2018
-						</p>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-	<script src="<?php echo base_url() ?>master/admin/assets/plugins/jquery/jquery-3.3.1.min.js"></script>
-	<script src="<?php echo base_url() ?>master/admin/assets/plugins/jquery-ui/jquery-ui.min.js"></script>
-	<script src="<?php echo base_url() ?>master/admin/assets/plugins/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-	<script src="<?php echo base_url() ?>master/admin/assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-	<script src="<?php echo base_url() ?>master/admin/assets/plugins/js-cookie/js.cookie.js"></script>
-	<script src="<?php echo base_url() ?>master/admin/assets/js/theme/default.min.js"></script>
-	<script src="<?php echo base_url() ?>master/admin/assets/js/apps.min.js"></script>
-	<!-- ================== END BASE JS ================== -->
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-	<script>
-		$(document).ready(function() {
-			App.init();
-		});
-	</script>
-<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','<?php echo base_url() ?>master/admin/www.google-analytics.com/analytics.js','ga');
+<head>
+  <meta charset="utf-8">
+  <title>Forum Diskusi Orang Tua</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="shortcut icon" href="<?php echo base_url() ?>favicon.png" type="image/x-icon"
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body style="background-image: url(<?php echo base_url() ?>gambar/slider.jpeg); background-size: cover; ">
+ 
+  <div class="kotak_login">
+    <div class="card card-signin my-5" style="padding: 10px; opacity: 0.8;" >
+    <!-- <center><img style="height: 100px; width: 100px;"  src="favicon.png"></center> -->
+    <p class="tulisan_login" style="font-weight: bold;">Login Forum</p>
+    <div>
+    </div>
+    <form method="post" action="<?php echo base_url('Login/melbu') ?>">
 
-	  ga('create', 'UA-53034621-1', 'auto');
-	  ga('send', 'pageview');
-
-	</script>
-	<?php $this->load->view('admin/part/codejs') ?>
+      <label>Username</label>
+      <input style="border-radius: 5px;" type="text" name="username" class="form_login" placeholder="Username" required="">
+ 
+      <label>Password</label>
+      <input style="border-radius: 5px;" type="password" name="psw" class="form_login" placeholder="Password" required="">
+ 
+      <input type="submit" class="btn btn-success" value="LOGIN" style="width: 100%">
+      <center>
+        <p style="margin-top: 5%;">Belum punya akun? Silahkan <a href="<?php echo base_url('Daftar') ?>">Daftar</a></p>
+      </center>
+      <center>
+        <a class="link" href="">kembali</a>
+      </center>
+    </form>
+    </div>
+  </div>
+ 
+ 
 </body>
+</html>

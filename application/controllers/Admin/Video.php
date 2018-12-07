@@ -9,12 +9,8 @@ class Video extends CI_Controller {
 
 	}
 	public function index(){
-		if(!$this->session->userdata('status') == 'login'){
-			redirect('Login');
-		}else{
 			$data['galery'] = $this->M_galery->tampildatagalery('Video')->result();
 			$this->load->view("admin/v_video",$data);
-		}
 
 	}
 	function simpanvideo(){
@@ -41,12 +37,12 @@ class Video extends CI_Controller {
 			);
 			$insert_data = $this->db->insert('galery',$data);
 		}
-		if ($insert_data > 0) {
+		if ($insert_data >= 0) {
         // $this->session->set_flashdata("Pesan", $this->core->alert_succes("Data Berhasil di simpan"));
-			redirect(base_url().'admin/Video?berhasil');
+			redirect(base_url().'Admin/Video');
 		}else{
         // $this->session->set_flashdata("Pesan", $this->core->alert_time("Data Gagal di simpan"));
-			redirect(base_url().'admin/Video?gagal');
+			redirect(base_url().'Admin/Video?gagal');
 		}
 	}
 
@@ -78,24 +74,21 @@ class Video extends CI_Controller {
 		$update_data = $this->db->update('galery',$data,$where);
 		if ($update_data >= 0) {
       // $this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di Perbarui"));
-			redirect(base_url().'admin/Video');
+			redirect(base_url().'Admin/Video');
 		} else{
       // $this->session->set_flashdata("Pesan",$this->core->alert_time("Data Berhasil di Perbarui"));
-			redirect(base_url().'Video');
+			redirect(base_url().'Admin/Video');
 		}
-
-	}
-	function updatevideo(){
 
 	}
 	function delete($id){
 		$where = array('idGalery'=>$id);
-		$hapus = $this->Umum-> delete($where,'galery');
+		$hapus = $this->Umum->delete($where,'galery');
 		if($hapus >= 0){
       // $this->session->set_flashdata("Pesan",$this->core->alert_succes("Berhasil di Hapus"));
-			header('location:'.base_url('admin/Video')); 
+			header('location:'.base_url('Admin/Video')); 
 		}else{
-			header('location:'.base_url('admin/Video'));
+			header('location:'.base_url('Admin/Video'));
       // $this->session->set_flashdata("Pesan",$this->core->alert_time("gagal Hapus"));
 		}
 		

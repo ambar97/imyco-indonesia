@@ -14,7 +14,7 @@
 				data-easeout="Power4.easeInOut" 
 				data-masterspeed="2000">
 				<!-- MAIN IMAGE -->
-				<img src="<?php echo base_url()?>gambar/slider2.jpg" alt="Slide Background Image"  width="1920" height="1280">
+				<img src="<?php echo base_url()?>gambar/slider2.jpeg" alt="Slide Background Image"  width="1920" height="1280">
 				<!-- LAYER NR. 1 -->
 				<div class="tp-caption" 
 				data-x="center" data-hoffset="0" 
