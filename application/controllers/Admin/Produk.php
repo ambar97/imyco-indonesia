@@ -8,8 +8,12 @@ class Produk extends CI_Controller {
 		$this->load->model('M_galery');
 	}
 	public function index(){
+		if(!$this->session->userdata('status') == 'login'){
+			redirect('Login');
+		}else{
 		$data['galery'] = $this->M_galery->tampildatagalery('Foto')->result();
 		$this->load->view("admin/v_produk",$data);
+	}
 	
 	}
 

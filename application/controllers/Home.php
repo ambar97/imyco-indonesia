@@ -9,6 +9,7 @@ class Home extends CI_Controller {
 	}
 	public function index()
 	{
+		$data['video']= $this->M_galery->tampildatavideo('Video')->result();
 		$data['galery'] = $this->M_galery->tampildatagalery('Foto')->result();
 		$this->load->view('client/vHome',$data);
 	}

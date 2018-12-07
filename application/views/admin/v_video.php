@@ -45,14 +45,16 @@
 											</div>
 									
 											<div class="modal-body">
-												<form method="post" action="<?php echo base_url('Admin/Video/simpanvideo') ?>">
+												<form method="post" action="<?php echo base_url('Admin/Video/simpanvideo') ?>" enctype="multipart/form-data">
 												<div class="alert alert-danger m-b-0">
 													<h5><i class="fa fa-info-circle"></i> </h5>
 													<input type="text" class="form-control m-b-5" name="jdlGalery" placeholder="Masukan Judul" required="" />
 													<br>
-													<input type="text" class="form-control m-b-5" name="lnkGalery" placeholder="Masukan Link Video" required="" />
+													<span>foto</span>
+													<input type="file"  name="lnkGalery"  required="" />
 													<br>
-													<textarea class="summernote" name="content"></textarea>
+													<br>
+													<input type="text" class="form-control m-b-5" name="link" placeholder="Masukan Link" required="">
 												</div>
 												<div class="modal-footer">
 													<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
@@ -98,9 +100,9 @@
 							<table id="data-table-buttons" class="table table-striped table-bordered">
 								<thead>
 									<tr>
-										<th width="1%"></th>
+										<th>No</th>
 										<th class="text-nowrap">Judul</th>
-										<th width="1%" data-orderable="false">Video</th>
+										<th data-orderable="false">Video</th>
 										<th class="text-nowrap">Action</th>
 									</tr>
 								</thead>
@@ -111,7 +113,7 @@
 										<td><?php echo $video->jdlGalery; ?></td>
 										<td><?php echo $video->link; ?></td>
 										<td align="center">
-											<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: red;" title="hapus" href="<?php echo base_url('Admin/Video/delete/'.$video -> idGalery) ?>"><i class="fa fa-trash"></i></a>
+											<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: red;" title="hapus" href="" onclick="deleted('<?php echo $video->idGalery; ?>')"><i class="fa fa-trash"></i></a>
 											<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: orange;" title="edit" href="#modal-alert<?php echo $video->idGalery ?>" data-toggle="modal"><i class="fa fa-brush"></i></a>
 										</td>
 										<div class="modal fade" id="modal-alert<?php echo $video->idGalery ?>">
@@ -125,15 +127,15 @@
 																<form method="post" action="<?php echo base_url('Admin/Video/editvideo') ?>" enctype="multipart/form-data">
 																	<div class="alert alert-danger m-b-0">
 																		<h5><i class="fa fa-info-circle"></i> </h5>
-																		<input type="text" name="idGambar" hidden="" value="<?php echo $video->idGalery ?>">
+																		<input type="text" name="idGambar" value="<?php echo $video->idGalery ?>">
 																		<span>Judul Gambar</span>
 																		<input type="text" class="form-control m-b-5" name="jdlGalery" placeholder="Masukan Judul" required="" value="<?php echo $video->jdlGalery ?>" />
 																		<br>
 																		<span>Site Url</span>
 																		<input type="text" class="form-control m-b-5" name="link" placeholder="Masukan Judul" required="" value="<?php echo $video->link ?>" />
-																		<input type="text" class="form-control m-b-5" name="idVideo" placeholder="Masukan Judul" required="" value="<?php echo $video->idGalery ?>" hidden />
 																		<br>
-																		<textarea class="summernote" name="content"></textarea>
+																		<span>Foto</span><br>
+																		<input type="file" name="lnkGalery">
 																	</div>
 																	<div class="modal-footer">
 																		<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
@@ -170,19 +172,20 @@
 	<!-- end page container -->
 	
 	<?php $this->load->view('admin/part/codejs') ?>
-
-	<script>
-		$(document).ready(function() {
-			App.init();
-			FormSummernote.init();
-		});
-	</script>
-	
 	<script>
 		$(document).ready(function() {
 			App.init();
 			TableManageButtons.init();
 		});
+		function deleted(param){
+                         var proc = window.confirm('Are you sure delete this data?');
+                         if(proc){
+                          document.location='<?php echo base_url(); ?>admin/Galeri/d_galeri/'+param;
+                      }
+                  }
+                  function updatejs(param){
+                      document.location='<?php echo base_url(); ?>admin/Karyawan/e_karyawan/'+param;
+                  }
 	</script>
 <script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -80,22 +80,22 @@
 							<table id="data-table-buttons" class="table table-striped table-bordered">
 								<thead>
 									<tr>
-										<th width="1%"></th>
-										<th class="text-nowrap">Judul</th>
-										<th width="1%" data-orderable="false">Gambar</th>
-										<th class="text-nowrap">Action</th>
+										<th >No</th>
+										<th >Judul</th>
+										<th >Gambar</th>
+										<th >Action</th>
 									</tr>
 								</thead>
 								<tbody>
 									<?php $no = 1; foreach ($galery as $foto ) {?>
 										<tr class="odd gradeX">
-											<td width="1%" class="f-s-600 text-inverse"><?php echo  $no++ ?></td>
+											<td class="f-s-600 text-inverse"><?php echo  $no++ ?></td>
 											<td><?php echo $foto->jdlGalery; ?></td>
-											<td width="1%" class="with-img"><img src="<?php echo base_url().$foto->link ?>" class="img-rounded height-30" /></td>
+											<td ><img src="<?php echo base_url().$foto->foto ?>" class="img-rounded height-30" /></td>
 											<td >
 												<div align="center">
 													<!-- btn delete -->
-													<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: red;" title="hapus" href="<?php echo base_url('Admin/Galeri/d_galeri/'.$foto -> idGalery) ?>"><i class="fa fa-trash"></i></a>
+													<a class="btn btn-default btn-icon btn-circle btn-lg" style="color: red;" title="hapus" href="" onclick="deleted('<?php echo $foto->idGalery; ?>')"><i class="fa fa-trash"></i></a>
 
 													<!-- btn edit -->
 
@@ -115,11 +115,11 @@
 																	<div class="alert alert-danger m-b-0">
 																		<h5><i class="fa fa-info-circle"></i> </h5>
 																		<input type="text" name="idGambar" hidden="" value="<?php echo $foto->idGalery ?>">
-																		<span>Judul Gambar</span>
+																		<span>Judul Gambar</span><br>
 																		<input type="text" class="form-control m-b-5" name="jdlGalery" placeholder="Masukan Judul" required="" value="<?php echo $foto->jdlGalery ?>" />
 																		<br>
 																		<span>Masukan Gambar</span>
-
+																		<br>
 																		<input type="file" id="input-file-now" name="link"/>
 																	</div>
 																	<div class="modal-footer">
@@ -160,6 +160,15 @@
 			App.init();
 			TableManageButtons.init();
 		});
+		function deleted(param){
+                         var proc = window.confirm('Are you sure delete this data?');
+                         if(proc){
+                          document.location='<?php echo base_url(); ?>admin/Galeri/d_galeri/'+param;
+                      }
+                  }
+                  function updatejs(param){
+                      document.location='<?php echo base_url(); ?>admin/Karyawan/e_karyawan/'+param;
+                  }
 	</script>
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

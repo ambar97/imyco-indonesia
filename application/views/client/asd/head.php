@@ -38,5 +38,5 @@
 
     <!-- Document Title
     ============================================= -->
-    <title>Granny | Elegant Restaurant & Cafe Html5 Template</title>
+    <title>IMyCo Indonesia</title>
 </head>

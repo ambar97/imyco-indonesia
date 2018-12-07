@@ -25,7 +25,7 @@ class Login extends CI_Controller {
 			$hashed_password = $cek1->password;
 			if(password_verify($password, $hashed_password)) {
 				$data_session = array(
-					'id_user' => $cek1->idAdmin,
+					'idAdmin' => $cek1->idAdmin,
 					'status' => "login",
 
 				);
@@ -41,7 +41,7 @@ class Login extends CI_Controller {
 		}else{
 			echo "berhasil";
 			$this->session->set_flashdata("Pesan",$this->alert->alert_time("Username & Password tidak terdaftar"));
-			redirect(base_url("Loginadmin?"));
+			redirect(base_url("Login?"));
 		}
 	}
 	function logout(){

@@ -30,18 +30,10 @@
 					<li class="nav-header">Navigation</li>
 					<li class="has-sub">
 						<a href="<?php echo base_url('Admin/Admin'); ?>">
-							<b class="caret"></b>
+							<!-- <b class="caret"></b> -->
 							<i class="fa fa-th-large"></i>
 							<span>Dashboard</span>
 						</a>
-					
-					<!-- <li class="has-sub">
-						<a href="javascript:;">
-							<b class="caret"></b>
-							<i class="fa fa-table"></i>
-							<span>Tables</span>
-						</a>
-					</li> -->
 					<li class="has-sub">
 						<a href="javascript:;">
 							<b class="caret"></b>
@@ -53,9 +45,9 @@
 							<li><a href="<?php echo base_url('Admin/Video') ?>">Video</a></li>
 						</ul>
 					</li>
-					<li class="has-sub">
-						<a href="<?php echo base_url('Admin/Produk'); ?>">
-							<b class="caret"></b>
+					<li class="has-sub" >
+						<a href="" >
+							<!-- <b class="caret"></b> -->
 							<i class="fa fa-coffee"></i>
 							<span>Produk</span>
 						</a>

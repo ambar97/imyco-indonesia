@@ -13,12 +13,12 @@
 									<?php foreach ($galery as $gl): ?>
 										<div class="portfolio-item filter-restaurent">
 											<div class="portfolio--img">
-												<img src="<?php echo base_url().$gl->link ?>" alt="Dish Image">
+												<img src="<?php echo base_url().$gl->foto ?>" alt="Dish Image">
 												<div class="portfolio--hover">
 													<div class="portfolio--action">
 														<div class="pos-vertical-center">
 															<div class="portfolio--zoom">
-																<a class="img-gallery-item" href="<?php echo base_url().$gl->link ?>" title="<?php echo $gl->jdlGalery ?>"></a>
+																<a class="img-gallery-item" href="<?php echo base_url().$gl->foto ?>" title="<?php echo $gl->jdlGalery ?>"></a>
 															</div>
 														</div>
 													</div>

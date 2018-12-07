@@ -39,7 +39,7 @@
 			data-frames='[{"delay":1750,"speed":1000,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'						data-splitin="none" 
 			data-splitout="none" 
 			data-responsive_offset="on">
-			<div class="slide--headline">The Best Tasting Experience!</div>
+			<div class="slide--headline">Kopi Jamur Pertama di Indonesia!</div>
 		</div>
 
 		<!-- LAYER NR. 3 -->
@@ -69,7 +69,7 @@
 	data-responsive_offset="on" 
 	data-responsive="off">
 	<div class="slide-action">
-		<a class="btn btn--white btn--bordered btn--lg" href="#">Let Start</a>
+		<a class="btn btn--white btn--bordered btn--lg" href="#channel">Let Start</a>
 	</div>
 </div>
 </li>

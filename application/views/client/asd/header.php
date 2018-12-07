@@ -92,10 +92,10 @@
                     <!-- .module-search end -->
                     <!-- Module Side NAV -->
                     <div class="module module-side-nav">
-                        <div class="module-icon side-nav-icon">
+                        <!-- <div class="module-icon side-nav-icon">
                             <i class="fa fa-bars"></i>
                             <span class="title">Side Navigation</span>
-                        </div>
+                        </div> -->
                         <div class="module-content module-hamburger">
                             <div class="hamburger-panel module-widgets bg-white">
 

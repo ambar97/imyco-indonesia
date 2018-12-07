@@ -32,7 +32,7 @@
                                         <h3>Our Phone</h3>
                                         <p>Office Telephone : - </p>
                                         <p>Mobile/Whatsapp : +62 81335 399 016</p>
-                                        <a class="link--styled" href="https://wa.me/6281335399016">Call Us</a>
+                                        <a class="link--styled" href="https://api.whatsapp.com/send?phone=6281335399016">Call Us</a>
                                     </div>
                                 </div>
                                 <!-- .col-md-6 end -->

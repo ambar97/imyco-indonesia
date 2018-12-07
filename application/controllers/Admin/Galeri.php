@@ -8,8 +8,12 @@ class Galeri extends CI_Controller {
 		$this->load->model('M_galery');
 	}
 	public function index(){
+		if(!$this->session->userdata('status') == 'login'){
+			redirect('Login');
+		}else{
 		$data['galery'] = $this->M_galery->tampildatagalery('Foto')->result();
 		$this->load->view("admin/v_galery",$data);
+	}
 
 	}
 	function simpanfoto(){
@@ -29,8 +33,9 @@ class Galeri extends CI_Controller {
           'idGalery'=>"",
           'jdlGalery' => $judul,
           'kategori'  => 'Foto',
-          'link'      => $foto,
-          'action'    => 2
+          'foto'      => $foto,
+          'link'		=>'',
+          'action'    => $user
         );
                 // die(var_dump($data));
         $insert_data = $this->db->insert('galery',$data);
@@ -64,12 +69,13 @@ class Galeri extends CI_Controller {
         $foto         = "gallery/Galeri/".$upload_data['file_name'];
     if ($upload_data['file_name'] == null) {
       $data = array(
-          'jdlGalery' => $judul
+          'jdlGalery' => $judul,
+          'link'		=> ''
         );
     }else{
       $data= array(
           'jdlGalery' => $judul,
-          'link'      => $foto
+          'foto'      => $foto
         );
     }            
     $update_data = $this->db->update('galery',$data,$where);
@@ -83,7 +89,7 @@ class Galeri extends CI_Controller {
   }
   public function d_galeri($id){
     $where = array('idGalery'=>$id);
-    $hapus = $this->M_galery-> delete($where,'galery');
+    $hapus = $this->Umum-> delete($where,'galery');
     if($hapus >= 0){
       // $this->session->set_flashdata("Pesan",$this->core->alert_succes("Berhasil di Hapus"));
       header('location:'.base_url('admin/Galeri')); 
